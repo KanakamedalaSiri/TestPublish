@@ -4,7 +4,7 @@
   "version" : "1.0",
   "intSvcs" : [ {
     "name" : "AddTwos",
-    "version" : "1.0",
+    "version" : "55.0",
     "etag" : "ceffe3f0-9294-4683-9978-85102764c78f"
   } ],
   "identity" : [ "ASDA", "fbook", "hellogoo", "oauth2" ],
