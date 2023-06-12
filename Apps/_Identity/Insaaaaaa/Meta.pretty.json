@@ -1,5 +1,5 @@
 {
-    "name": "oauth2",
+    "name": "Insaaaaaa",
     "type": "oauth2",
     "version": "1.0",
     "metaPreference": -1,
@@ -10,18 +10,19 @@
         },
         "profile": {
             "profile_attribute_selectors": {
-                "federation_id": "",
+                "federation_id": "data.id",
                 "last_name": "",
                 "custom_profile_attribute_selectors": {
                     
                 },
+                "display_name": "data.full_name",
                 "first_name": "",
                 "email": ""
             },
             "endpoint": {
-                "location": "",
-                "type": "none",
-                "value": ""
+                "location": "url",
+                "type": "direct",
+                "value": "https://api.instagram.com/v1/users/self"
             },
             "request_method": "GET"
         },
@@ -31,12 +32,12 @@
         ],
         "client_authentication": {
             "client_pvt_key_jwt": false,
-            "authentication_scheme": "header",
+            "authentication_scheme": "form",
             "client_secret": "",
             "client_id": ""
         },
-        "authorization_endpoint": "https://100000006.auth.dev-hclvoltmx.net/oauth2/callback",
-        "logout_url": "",
+        "authorization_endpoint": "https://api.instagram.com/oauth/authorize/",
+        "logout_url": "https://instagram.com/accounts/logout",
         "additional_data": {
             "refresh_request": [
                 
@@ -55,6 +56,7 @@
             ]
         },
         "grant_type": "authorization_code",
+        "scope": "basic",
         "dollarParamPresence": {
             "logout_url": false,
             "revoke_url": false,
@@ -62,9 +64,9 @@
             "authorization_endpoint": false,
             "token_endpoint": false
         },
-        "authentication_scheme": "header",
-        "oauthProviderType": "default",
-        "token_endpoint": "https://100000006.auth.dev-hclvoltmx.net/oauth2/callback"
+        "authentication_scheme": "query",
+        "oauthProviderType": "instagram",
+        "token_endpoint": "https://api.instagram.com/oauth/access_token"
     },
     "policyConfig": {
         "def_user_status": "pending",

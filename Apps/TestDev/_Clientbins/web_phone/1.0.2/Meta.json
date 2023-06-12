@@ -1,8 +1,0 @@
-{
-  "filename": "storeDSLocalAPI.zip",
-  "channels": "responsive_web",
-  "upgradable": false,
-  "displayname": "storeDSLocalAPI",
-  "description": "'Binary for storeDSLocalAPI'",
-  "version": "1.0.2"
-}
