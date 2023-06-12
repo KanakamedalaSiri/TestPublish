@@ -1,8 +1,8 @@
 {
-  "filename": "storeDSLocalAPI.zip",
+  "filename": "KSApp1.zip",
   "channels": "responsive_web",
   "upgradable": false,
-  "displayname": "storeDSLocalAPI",
-  "description": "'Binary for storeDSLocalAPI'",
+  "displayname": "Sample",
+  "description": "'Binary for KSApp1'",
   "version": "1.0.1"
 }
