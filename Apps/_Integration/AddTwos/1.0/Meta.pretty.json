@@ -1,0 +1,11 @@
+{
+    "serviceType": "integration",
+    "jars": [
+        {
+            "name": "addTwoNumbers.js",
+            "type": "jsfile"
+        }
+    ],
+    "description": "Addition of numbers",
+    "empty": true
+}
