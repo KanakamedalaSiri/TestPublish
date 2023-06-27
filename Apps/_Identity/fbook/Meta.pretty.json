@@ -20,9 +20,9 @@
         },
         "auth_type": "oauth2",
         "authentication_scheme": "header",
-        "authorization_endpoint": "https://accounts.google.com/o/oauth2/v2/auth",
+        "authorization_endpoint": "https://www.facebook.com/v3.0/dialog/oauth/",
         "client_authentication": {
-            "authentication_scheme": "header",
+            "authentication_scheme": "form",
             "client_id": "",
             "client_pvt_key_jwt": false,
             "client_secret": ""
@@ -39,32 +39,30 @@
         },
         "enable_identity_pkce": true,
         "grant_type": "authorization_code",
-        "logout_url": "https://accounts.google.com/logout",
-        "oauthProviderType": "google",
+        "logout_url": "",
+        "oauthProviderType": "facebook",
         "profile": {
             "endpoint": {
                 "location": "url",
-                "selector": "userinfo_endpoint",
-                "type": "indirect",
-                "value": "https://accounts.google.com/.well-known/openid-configuration"
+                "type": "direct",
+                "value": "https://graph.facebook.com/me"
             },
             "profile_attribute_selectors": {
                 "custom_profile_attribute_selectors": {
                     
                 },
-                "display_name": "name",
-                "email": "email",
-                "federation_id": "sub",
-                "first_name": "given_name",
-                "last_name": "family_name"
+                "email": "",
+                "federation_id": "id",
+                "first_name": "",
+                "last_name": ""
             },
             "request_method": "GET"
         },
-        "scope": "openid email profile",
+        "scope": "email",
         "session_restrictions": {
             "session_restriction_type": "allow_any_number_of_sessions"
         },
-        "token_endpoint": "https://www.googleapis.com/oauth2/v4/token"
+        "token_endpoint": "https://graph.facebook.com/v3.0/oauth/access_token"
     },
     "empty": true,
     "identityMeta": {
@@ -72,7 +70,7 @@
     },
     "isIntegrityEnabled": true,
     "metaPreference": -1,
-    "name": "hellogoo",
+    "name": "fbook",
     "policyConfig": {
         "def_user_status": "pending",
         "max_login_fail": 5
