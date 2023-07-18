@@ -1,7 +1,7 @@
 {
-    "description": "'Binary for storeDSLocalAPI'",
-    "displayname": "storeDSLocalAPI",
-    "filename": "storeDSLocalAPI.zip",
+    "description": "'Binary for MKAFSampleApp'",
+    "displayname": "MKAFSampleApp",
+    "filename": "MKAFSampleApp.zip",
     "upgradable": false,
     "version": "1.0.1"
 }
