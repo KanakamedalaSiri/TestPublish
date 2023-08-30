@@ -1,7 +1,6 @@
 {
     "identity": [
         "ASDA",
-        "hellogoo",
         "Insaaaaaa",
         "Instas",
         "oauth2"
@@ -15,5 +14,5 @@
         }
     ],
     "subType": "customapp",
-    "version": "9.0"
+    "version": "1.0"
 }
