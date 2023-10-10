@@ -1,0 +1,34 @@
+{
+    "customVerb": false,
+    "enableFrontendUrl": false,
+    "operationConfig": {
+        "applyCommonMapping": true,
+        "applyRequestCommonMapping": true,
+        "applyResponseCommonMapping": true,
+        "cachable": false,
+        "decodeResponseBody": false,
+        "httpMethod": "GET",
+        "name": "updateErrorLog4854",
+        "opcode": "update",
+        "referencingEndpoint": "default",
+        "relationshipHierarchyMapping": {
+            "actions": {
+                "create": true,
+                "delete": true,
+                "partialupdate": true,
+                "update": true
+            },
+            "children": [
+                
+            ],
+            "name": "Error_Log",
+            "selected": true
+        },
+        "requestXmlMappingOverride": false,
+        "responseEncoding": "UTF-8",
+        "responseXmlMappingOverride": false,
+        "security": "authorized_app_user",
+        "smsEnabled": false,
+        "type": "MappedToBackend"
+    }
+}

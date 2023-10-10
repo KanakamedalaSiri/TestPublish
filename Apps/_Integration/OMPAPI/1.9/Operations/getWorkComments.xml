@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service serviceGroup="" cachable="false" cacheduration="" customOperation="false" description="" endpoint="default" groupType="" id="getWorkComments" passwordencrypted="false" security="authorized_app_user" type="jsonConnector" smscode="" smsenabled="false">
+    <service-config>
+        <config-param api-version="" appid="" name="preprocessorname" value=""/>
+        <config-param api-version="" appid="" name="postprocessorname" value=""/>
+        <config-param api-version="" appid="" name="preprocessorJS" value=""/>
+        <config-param api-version="" appid="" name="postprocessorJS" value=""/>
+        <config-param api-version="" appid="" name="preprocessorRules" value=""/>
+        <config-param api-version="" appid="" name="postprocessorRules" value=""/>
+        <config-param api-version="" appid="" name="kony_http_supported_methods" value="POST"/>
+        <config-param api-version="" appid="" name="endpointUrl" value="https://webapi-dev.coned.com/OMPServerGasXdev/OMPServer/arm/v22/workcomments/entitytype/$entitytype/id/$entityglobalid?numberoflatestcomments=$numberoflatestcomments"/>
+        <config-param api-version="" appid="" name="ignorehttpproxy" value="true"/>
+        <config-param api-version="" appid="" name="http.method" value="GET"/>
+        <config-param api-version="" appid="" name="dataObjectName" value=""/>
+        <config-param api-version="" appid="" name="sockettimeout" value=""/>
+        <config-param api-version="" appid="" name="responseEncoding" value="UTF-8"/>
+        <config-param api-version="" appid="" name="isembedxmlpresent" value="false"/>
+        <config-param api-version="" appid="" name="retrycount" value="0"/>
+        <config-param api-version="" appid="" name="identityProvider" value="ConEdOMPAPILogin"/>
+        <config-param api-version="" appid="" name="identityProviderType" value="custom"/>
+    </service-config>
+    <service-input passthrough="false" isExtended="false">
+        <header datatype="" name="" passthrough="false" isExtended="false">
+            <param datatype="string" defaultvalue="" description="" encode="false" format="None" formatvalue="" name="Accept" order="" paramOrder="0" parentOrder="0" sms-name="" src="constant" sourcevalue="application/json" srcformatvalue="" target="" targetdatatype="" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="false" format="None" formatvalue="" name="Ocp-Apim-Subscription-Key" order="" paramOrder="0" parentOrder="0" sms-name="" src="identity" sourcevalue="ConEdOMPAPILogin.security.key" srcformatvalue="" target="" targetdatatype="" testvalue="7a7c4f5507dd454da263d3c8a5b6a4e2" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="false" format="None" formatvalue="" name="ARM-OMP-Parameters" order="" paramOrder="0" parentOrder="0" sms-name="" src="identity" sourcevalue="ConEdOMPAPILogin.security.armomp" srcformatvalue="" target="" targetdatatype="" testvalue="Bearer eyJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfaWQiOiJHQ0VYVDEiLCJ1c2VybmFtZSI6IkdDRVhUMSIsImV4cCI6MTU4MjU5NTYwNH0.SfcSExIFiwRZgPK63faUSzfso8ABibpCs8flYU0b78g" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="false" format="None" formatvalue="" name="Authorization" order="" paramOrder="0" parentOrder="0" sms-name="" src="identity" sourcevalue="ConEdOMPAPILogin.security.auth" srcformatvalue="" target="" targetdatatype="" testvalue="Bearer eyJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfaWQiOiJHQ0VYVDEiLCJ1c2VybmFtZSI6IkdDRVhUMSIsImV4cCI6MTU4MjU5NDY5MX0.AsMePT7819T6SNeKcO2UsXCF7xIw8v4hVmEaOG-q9qk" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+        </header>
+        <param datatype="string" defaultvalue="WR" description="" encode="false" format="None" formatvalue="" name="entitytype" order="" paramOrder="1" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="WR" value="WR" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="false" format="None" formatvalue="" name="entityglobalid" order="" paramOrder="2" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="ARM~4406" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="999" description="" encode="false" format="None" formatvalue="" name="numberoflatestcomments" order="" paramOrder="3" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="999" value="999" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <stub-param value=""/>
+    </service-input>
+    <service-output passthrough="false" isExtended="false">
+        <dataset defaultvalue="" id="Comments" order="" paramOrder="1" parentOrder="0" src="$." testvalue="" isExtended="false">
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="CommentGlobalID" order="" paramOrder="2" parentOrder="1" passnull="false" sms-name="" src="CommentGlobalID" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="EntityType" order="" paramOrder="3" parentOrder="1" passnull="false" sms-name="" src="EntityType" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="ARMEntityUniqueID" order="" paramOrder="4" parentOrder="1" passnull="false" sms-name="" src="ARMEntityUniqueID" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="ARMWRSystemCode" order="" paramOrder="5" parentOrder="1" passnull="false" sms-name="" src="ARMWRSystemCode" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="number" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="ARMCommentID" order="" paramOrder="6" parentOrder="1" passnull="false" sms-name="" src="ARMCommentID" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="Comment" order="" paramOrder="7" parentOrder="1" passnull="false" sms-name="" src="Comment" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="EnteredDateTime" order="" paramOrder="8" parentOrder="1" passnull="false" sms-name="" src="EnteredDateTime" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="number" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="EnteredByPersonNumber" order="" paramOrder="9" parentOrder="1" passnull="false" sms-name="" src="EnteredByPersonNumber" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="EnteredByEmail" order="" paramOrder="10" parentOrder="1" passnull="false" sms-name="" src="EnteredByEmail" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="EnteredByCoEmployeeID" order="" paramOrder="11" parentOrder="1" passnull="false" sms-name="" src="EnteredByCoEmployeeID" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="CommentType" order="" paramOrder="12" parentOrder="1" passnull="false" sms-name="" src="CommentType" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="EnvironmentType" order="" paramOrder="13" parentOrder="1" passnull="false" sms-name="" src="EnvironmentType" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="UpdateType" order="" paramOrder="14" parentOrder="1" passnull="false" sms-name="" src="UpdateType" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+        </dataset>
+    </service-output>
+</service>

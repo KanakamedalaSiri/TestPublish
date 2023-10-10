@@ -1,0 +1,112 @@
+{
+    "customVerb": false,
+    "enableFrontendUrl": false,
+    "operationConfig": {
+        "applyCommonMapping": false,
+        "applyRequestCommonMapping": false,
+        "applyResponseCommonMapping": false,
+        "backendMeta": {
+            "operationName": "getCompanyContractorPerson",
+            "serviceName": "OMPAPI",
+            "serviceVersion": "1.9"
+        },
+        "cachable": false,
+        "decodeResponseBody": false,
+        "httpMethod": "GET",
+        "iMapping": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<mapper xmlns=\"http://www.kony.com/ns/mapper\">\n    <map inputpath=\"request_in\" outputpath=\"request_out\">\n        <set-param inputpath=\"PersonNumber\" outputpath=\"personnumber\"/>\n    </map>\n</mapper>\n",
+        "iVisualMappingData": "{\"nodeDataArray\":[{\"isGroup\":true,\"key\":\"request_in\",\"text\":\"Person\",\"xy\":\"150 100\"},{\"isGroup\":true,\"key\":\"request_out\",\"text\":\"OMPAPI (1.9).getCompanyContractorPerson\",\"xy\":\"770 100\"}],\"linkDataArray\":[{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Person:PersonNumber:\",\"to\":\"target:personnumber:\",\"fromPort\":\"source:Person:PersonNumber:\",\"toPort\":\"target:personnumber:\"}],\"blockCount\":{\"variableCount\":0},\"variableMap\":{},\"xmlMappingOverride\":false}",
+        "mapperData": [
+            {
+                "applyCommonMapping": false,
+                "applyRequestCommonMapping": false,
+                "applyResponseCommonMapping": false,
+                "disabled": false,
+                "iMapping": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<mapper xmlns=\"http://www.kony.com/ns/mapper\">\n    <map inputpath=\"request_in\" outputpath=\"request_out\">\n        <set-param inputpath=\"PersonNumber\" outputpath=\"personnumber\"/>\n    </map>\n</mapper>\n",
+                "iVisualMappingData": "{\"nodeDataArray\":[{\"isGroup\":true,\"key\":\"request_in\",\"text\":\"Person\",\"xy\":\"150 100\"},{\"isGroup\":true,\"key\":\"request_out\",\"text\":\"OMPAPI (1.9).getCompanyContractorPerson\",\"xy\":\"770 100\"}],\"linkDataArray\":[{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Person:PersonNumber:\",\"to\":\"target:personnumber:\",\"fromPort\":\"source:Person:PersonNumber:\",\"toPort\":\"target:personnumber:\"}],\"blockCount\":{\"variableCount\":0},\"variableMap\":{},\"xmlMappingOverride\":false}",
+                "name": "base mapper1",
+                "oMapping": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<mapper xmlns=\"http://www.kony.com/ns/mapper\">\n    <map inputpath=\"response_in\" outputpath=\"response_out\">\n        <map inputpath=\"Persons\" outputpath=\"Person\">\n            <set-param inputpath=\"PersonNumber\" outputpath=\"PersonNumber\"/>\n            <set-param inputpath=\"PersonName\" outputpath=\"PersonName\"/>\n            <set-param inputpath=\"FirstName\" outputpath=\"FirstName\"/>\n            <set-param inputpath=\"MiddleInitial\" outputpath=\"MiddleInitial\"/>\n            <set-param inputpath=\"LastName\" outputpath=\"LastName\"/>\n            <set-param inputpath=\"Active\" outputpath=\"Active\"/>\n            <set-param inputpath=\"EmployeeID\" outputpath=\"EmployeeID\"/>\n            <set-param inputpath=\"ARMUserID\" outputpath=\"ARMUserID\"/>\n            <set-param inputpath=\"ARMSuperUser\" outputpath=\"ARMSuperUser\"/>\n        </map>\n    </map>\n</mapper>\n",
+                "oVisualMappingData": "{\"nodeDataArray\":[{\"isGroup\":true,\"key\":\"response_out\",\"text\":\"Person\",\"xy\":\"770 100\"},{\"isGroup\":true,\"key\":\"response_in\",\"text\":\"OMPAPI (1.9).getCompanyContractorPerson\",\"xy\":\"150 94\"}],\"linkDataArray\":[{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Persons:ARMSuperUser:\",\"to\":\"target:Person:ARMSuperUser:\",\"fromPort\":\"source:Persons:ARMSuperUser:\",\"toPort\":\"target:Person:ARMSuperUser:\"},{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Persons:ARMUserID:\",\"to\":\"target:Person:ARMUserID:\",\"fromPort\":\"source:Persons:ARMUserID:\",\"toPort\":\"target:Person:ARMUserID:\"},{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Persons:Active:\",\"to\":\"target:Person:Active:\",\"fromPort\":\"source:Persons:Active:\",\"toPort\":\"target:Person:Active:\"},{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Persons:EmployeeID:\",\"to\":\"target:Person:EmployeeID:\",\"fromPort\":\"source:Persons:EmployeeID:\",\"toPort\":\"target:Person:EmployeeID:\"},{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Persons:FirstName:\",\"to\":\"target:Person:FirstName:\",\"fromPort\":\"source:Persons:FirstName:\",\"toPort\":\"target:Person:FirstName:\"},{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Persons:LastName:\",\"to\":\"target:Person:LastName:\",\"fromPort\":\"source:Persons:LastName:\",\"toPort\":\"target:Person:LastName:\"},{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Persons:MiddleInitial:\",\"to\":\"target:Person:MiddleInitial:\",\"fromPort\":\"source:Persons:MiddleInitial:\",\"toPort\":\"target:Person:MiddleInitial:\"},{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Persons:PersonName:\",\"to\":\"target:Person:PersonName:\",\"fromPort\":\"source:Persons:PersonName:\",\"toPort\":\"target:Person:PersonName:\"},{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Persons:PersonNumber:\",\"to\":\"target:Person:PersonNumber:\",\"fromPort\":\"source:Persons:PersonNumber:\",\"toPort\":\"target:Person:PersonNumber:\"}],\"blockCount\":{\"variableCount\":0},\"variableMap\":{},\"xmlMappingOverride\":false}",
+                "order": 1,
+                "requestXmlMappingOverride": false,
+                "responseXmlMappingOverride": false
+            }
+        ],
+        "name": "getCompanyContractorPerson1348",
+        "oMapping": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<mapper xmlns=\"http://www.kony.com/ns/mapper\">\n    <map inputpath=\"response_in\" outputpath=\"response_out\">\n        <map inputpath=\"Persons\" outputpath=\"Person\">\n            <set-param inputpath=\"PersonNumber\" outputpath=\"PersonNumber\"/>\n            <set-param inputpath=\"PersonName\" outputpath=\"PersonName\"/>\n            <set-param inputpath=\"FirstName\" outputpath=\"FirstName\"/>\n            <set-param inputpath=\"MiddleInitial\" outputpath=\"MiddleInitial\"/>\n            <set-param inputpath=\"LastName\" outputpath=\"LastName\"/>\n            <set-param inputpath=\"Active\" outputpath=\"Active\"/>\n            <set-param inputpath=\"EmployeeID\" outputpath=\"EmployeeID\"/>\n            <set-param inputpath=\"ARMUserID\" outputpath=\"ARMUserID\"/>\n            <set-param inputpath=\"ARMSuperUser\" outputpath=\"ARMSuperUser\"/>\n        </map>\n    </map>\n</mapper>\n",
+        "oVisualMappingData": "{\"nodeDataArray\":[{\"isGroup\":true,\"key\":\"response_out\",\"text\":\"Person\",\"xy\":\"770 100\"},{\"isGroup\":true,\"key\":\"response_in\",\"text\":\"OMPAPI (1.9).getCompanyContractorPerson\",\"xy\":\"150 94\"}],\"linkDataArray\":[{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Persons:ARMSuperUser:\",\"to\":\"target:Person:ARMSuperUser:\",\"fromPort\":\"source:Persons:ARMSuperUser:\",\"toPort\":\"target:Person:ARMSuperUser:\"},{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Persons:ARMUserID:\",\"to\":\"target:Person:ARMUserID:\",\"fromPort\":\"source:Persons:ARMUserID:\",\"toPort\":\"target:Person:ARMUserID:\"},{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Persons:Active:\",\"to\":\"target:Person:Active:\",\"fromPort\":\"source:Persons:Active:\",\"toPort\":\"target:Person:Active:\"},{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Persons:EmployeeID:\",\"to\":\"target:Person:EmployeeID:\",\"fromPort\":\"source:Persons:EmployeeID:\",\"toPort\":\"target:Person:EmployeeID:\"},{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Persons:FirstName:\",\"to\":\"target:Person:FirstName:\",\"fromPort\":\"source:Persons:FirstName:\",\"toPort\":\"target:Person:FirstName:\"},{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Persons:LastName:\",\"to\":\"target:Person:LastName:\",\"fromPort\":\"source:Persons:LastName:\",\"toPort\":\"target:Person:LastName:\"},{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Persons:MiddleInitial:\",\"to\":\"target:Person:MiddleInitial:\",\"fromPort\":\"source:Persons:MiddleInitial:\",\"toPort\":\"target:Person:MiddleInitial:\"},{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Persons:PersonName:\",\"to\":\"target:Person:PersonName:\",\"fromPort\":\"source:Persons:PersonName:\",\"toPort\":\"target:Person:PersonName:\"},{\"category\":\"Mapping\",\"visible\":true,\"from\":\"source:Persons:PersonNumber:\",\"to\":\"target:Person:PersonNumber:\",\"fromPort\":\"source:Persons:PersonNumber:\",\"toPort\":\"target:Person:PersonNumber:\"}],\"blockCount\":{\"variableCount\":0},\"variableMap\":{},\"xmlMappingOverride\":false}",
+        "odata": [
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$select",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$filter",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$orderby",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$top",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$skip",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$expand",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$batchsize",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$batchid",
+                "isExtended": false
+            }
+        ],
+        "relationshipHierarchyMapping": {
+            "actions": {
+                "get": true
+            },
+            "children": [
+                
+            ],
+            "name": "Person",
+            "selected": true
+        },
+        "requestXmlMappingOverride": false,
+        "responseEncoding": "UTF-8",
+        "responseXmlMappingOverride": false,
+        "security": "authorized_app_user",
+        "smsEnabled": false,
+        "type": "MappedToBackend"
+    }
+}

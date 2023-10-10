@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service serviceGroup="" cachable="false" cacheduration="" customOperation="false" description="" endpoint="default" groupType="" id="getPersonDetailsEmail" passwordencrypted="false" security="authorized_app_user" type="jsonConnector" smscode="" smsenabled="false">
+    <service-config>
+        <config-param api-version="" appid="" name="preprocessorname" value=""/>
+        <config-param api-version="" appid="" name="postprocessorname" value=""/>
+        <config-param api-version="" appid="" name="preprocessorJS" value=""/>
+        <config-param api-version="" appid="" name="postprocessorJS" value=""/>
+        <config-param api-version="" appid="" name="preprocessorRules" value=""/>
+        <config-param api-version="" appid="" name="postprocessorRules" value=""/>
+        <config-param api-version="" appid="" name="kony_http_supported_methods" value="POST"/>
+        <config-param api-version="" appid="" name="endpointUrl" value="https://webapi-dev.coned.com/OMPServerGasXdev/OMPServer/arm/v22/person?updateddatetime=$UpdatedDatetime&amp;personcoemployeeid=$personcoemployeeid"/>
+        <config-param api-version="" appid="" name="ignorehttpproxy" value="true"/>
+        <config-param api-version="" appid="" name="http.method" value="GET"/>
+        <config-param api-version="" appid="" name="dataObjectName" value=""/>
+        <config-param api-version="" appid="" name="sockettimeout" value="300000"/>
+        <config-param api-version="" appid="" name="responseEncoding" value="UTF-8"/>
+        <config-param api-version="" appid="" name="isembedxmlpresent" value="false"/>
+        <config-param api-version="" appid="" name="retrycount" value="0"/>
+        <config-param api-version="" appid="" name="identityProvider" value="ConEdOMPAPILogin"/>
+        <config-param api-version="" appid="" name="identityProviderType" value="custom"/>
+    </service-config>
+    <service-input passthrough="false" isExtended="false">
+        <header datatype="" name="" passthrough="false" isExtended="false">
+            <param datatype="string" defaultvalue="" description="" encode="false" format="None" formatvalue="" name="Accept" order="" paramOrder="0" parentOrder="0" sms-name="" src="constant" sourcevalue="application/json" srcformatvalue="" target="" targetdatatype="" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="false" format="None" formatvalue="" name="Ocp-Apim-Subscription-Key" order="" paramOrder="0" parentOrder="0" sms-name="" src="identity" sourcevalue="ConEdOMPAPILogin.security.key" srcformatvalue="" target="" targetdatatype="" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="false" format="None" formatvalue="" name="Authorization" order="" paramOrder="0" parentOrder="0" sms-name="" src="identity" sourcevalue="ConEdOMPAPILogin.security.auth" srcformatvalue="" target="" targetdatatype="" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="false" format="None" formatvalue="" name="ARM-OMP-Parameters" order="" paramOrder="0" parentOrder="0" sms-name="" src="identity" sourcevalue="ConEdOMPAPILogin.security.armomp" srcformatvalue="" target="" targetdatatype="" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+        </header>
+        <param datatype="string" defaultvalue="2020-06-17T20:29:52Z" description="" encode="true" format="None" formatvalue="" name="UpdatedDatetime" order="" paramOrder="1" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="2020-06-17T20:29:52Z" value="2020-06-17T20:29:52Z" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="personcoemployeeid" order="" paramOrder="2" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="C4027" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <template-param datatype="" defaultvalue="{}" description="" encode="false" format="" formatvalue="" name="message" order="" paramOrder="0" parentOrder="0" sms-name="" src="" sourcevalue="" srcformatvalue="" target="" targetdatatype="" value="{}" isExtended="false">
+            <accessType></accessType>
+        </template-param>
+        <stub-param value="[{&#10;   &quot;Action&quot;: &quot;UPDATE&quot;,&#10;   &quot;PersonNumber&quot;: 7633,&#10;   &quot;PersonInitials&quot;: &quot;SSNH&quot;,&#10;   &quot;PersonName&quot;: &quot;Selva, Soundar S&quot;,&#10;   &quot;Active&quot;: &quot;True&quot;,&#10;   &quot;CompanyCode&quot;: &quot;CONED&quot;,&#10;   &quot;ContractorCode&quot;: null,&#10;   &quot;CompanyPhoneNumber&quot;: &quot;7188026354     &quot;,&#10;   &quot;OperatingDistrict&quot;: &quot;EB&quot;,&#10;   &quot;CrewHeadQuarters&quot;: &quot;E125&quot;,&#10;   &quot;EmergencyPhoneNumber&quot;: &quot;7188026354     &quot;,&#10;   &quot;EngineeringDistrict&quot;: &quot;BQENG&quot;,&#10;   &quot;ResponsibleArea&quot;: &quot;CONED&quot;,&#10;   &quot;FaxNumber&quot;: &quot;71880263541234 &quot;,&#10;   &quot;EmployeeID&quot;: &quot;1234567&quot;,&#10;   &quot;ARMSuperUser&quot;: &quot;False&quot;,&#10;   &quot;ARMUserID&quot;: null,&#10;   &quot;UpdatedDateTime&quot;: &quot;2018-10-16T00:12:13Z&quot;,&#10;   &quot;AssignmentID&quot;: &quot;2&quot;,&#10;   &quot;OrganizationEntity&quot;:    [&#10;            {&#10;         &quot;Action&quot;: &quot;INSERT&quot;,&#10;         &quot;OrganizationType&quot;: &quot;PD&quot;,&#10;         &quot;OrganizationCode&quot;: &quot;BQENG&quot;,&#10;         &quot;Description&quot;: &quot;BROOKLYN QUEENS&quot;,&#10;         &quot;UpdatedDateTime&quot;: &quot;2018-10-15T23:58:34Z&quot;&#10;      },&#10;            {&#10;         &quot;Action&quot;: &quot;INSERT&quot;,&#10;         &quot;OrganizationType&quot;: &quot;CO&quot;,&#10;         &quot;OrganizationCode&quot;: &quot;UAT01&quot;,&#10;         &quot;Description&quot;: &quot;Vogel - UAT&quot;,&#10;         &quot;UpdatedDateTime&quot;: &quot;2018-10-16T00:07:04Z&quot;&#10;      },&#10;          {&#10;         &quot;Action&quot;: &quot;INSERT&quot;,&#10;         &quot;OrganizationType&quot;: &quot;OD&quot;,&#10;         &quot;OrganizationCode&quot;: &quot;EB&quot;,&#10;         &quot;Description&quot;: &quot;ELECTRIC-BROOKLYN&quot;,&#10;         &quot;UpdatedDateTime&quot;: &quot;2018-10-15T23:58:34Z&quot;&#10;      },&#10;            {&#10;         &quot;Action&quot;: &quot;INSERT&quot;,&#10;         &quot;OrganizationType&quot;: &quot;CH&quot;,&#10;         &quot;OrganizationCode&quot;: &quot;CBMAN&quot;,&#10;         &quot;Description&quot;: &quot;BROOKLYN MANETTA CONTRACTOR&quot;,&#10;         &quot;UpdatedDateTime&quot;: &quot;2018-10-16T00:07:04Z&quot;&#10;      },&#10;            {&#10;         &quot;Action&quot;: &quot;INSERT&quot;,&#10;         &quot;OrganizationType&quot;: &quot;CH&quot;,&#10;         &quot;OrganizationCode&quot;: &quot;E125&quot;,&#10;         &quot;Description&quot;: &quot;ELECTRIC-MANHATTAN 125TH&quot;,&#10;         &quot;UpdatedDateTime&quot;: &quot;2018-10-16T00:00:06Z&quot;&#10;      }&#10;   ],&#10;   &quot;PersonWorkGroupEntity&quot;: [   {&#10;      &quot;Action&quot;: &quot;INSERT&quot;,&#10;      &quot;WorkGroupCode&quot;: &quot;CECONY ELECTRIC&quot;,&#10;      &quot;UpdatedDateTime&quot;: &quot;2018-10-16T00:10:18Z&quot;&#10;   }],&#10;   &quot;SkillEntity&quot;: [   {&#10;      &quot;Action&quot;: &quot;INSERT&quot;,&#10;      &quot;SkillType&quot;: &quot;ST_NEW&quot;,&#10;      &quot;Description&quot;: &quot;New skill type created after CentralConfig1.8.2.0[5]-Refresh3 to QA&quot;,&#10;      &quot;UpdatedDateTime&quot;: &quot;2018-10-16T00:10:18Z&quot;&#10;   }],&#10;   &quot;PersonQualificationEntity&quot;: [   {&#10;      &quot;Action&quot;: &quot;INSERT&quot;,&#10;      &quot;QualificationType&quot;: &quot;Q&quot;,&#10;      &quot;EffectiveDate&quot;: &quot;2018-10-09&quot;,&#10;      &quot;ExpirationDate&quot;: &quot;2018-12-31&quot;,&#10;      &quot;QualificationID&quot;: &quot;ID1234&quot;,&#10;      &quot;IssuedBy&quot;: &quot;ABC L&quot;,&#10;      &quot;UpdatedDateTime&quot;: &quot;2018-10-16T00:12:13Z&quot;&#10;   }]&#10;}]"/>
+    </service-input>
+    <service-output passthrough="false" isExtended="false">
+        <dataset defaultvalue="" id="Persons" order="" paramOrder="1" parentOrder="0" src="$.[*]" testvalue="" isExtended="false">
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="PersonNumber" order="" paramOrder="2" parentOrder="1" passnull="false" sms-name="" src="/PersonNumber" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="PersonName" order="" paramOrder="3" parentOrder="1" passnull="false" sms-name="" src="/PersonName" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="boolean" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="Active" order="" paramOrder="4" parentOrder="1" passnull="false" sms-name="" src="/Active" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="EmployeeID" order="" paramOrder="5" parentOrder="1" passnull="false" sms-name="" src="/EmployeeID" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="PersonEmailID" order="" paramOrder="6" parentOrder="1" passnull="false" sms-name="" src="/PersonEmailID" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+        </dataset>
+    </service-output>
+</service>

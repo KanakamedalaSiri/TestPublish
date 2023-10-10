@@ -1,0 +1,99 @@
+{
+  "operationConfig" : {
+    "name" : "getReasonCodesOrch7382",
+    "type" : "MappedToBackend",
+    "cachable" : false,
+    "smsEnabled" : false,
+    "security" : "authorized_app_user",
+    "responseEncoding" : "UTF-8",
+    "httpMethod" : "GET",
+    "decodeResponseBody" : false,
+    "odata" : [ {
+      "id" : "$select",
+      "dataType" : "string",
+      "encode" : true,
+      "accessType" : "readonly",
+      "isExtended" : false
+    }, {
+      "id" : "$filter",
+      "dataType" : "string",
+      "encode" : true,
+      "accessType" : "readonly",
+      "isExtended" : false
+    }, {
+      "id" : "$orderby",
+      "dataType" : "string",
+      "encode" : true,
+      "accessType" : "readonly",
+      "isExtended" : false
+    }, {
+      "id" : "$top",
+      "dataType" : "string",
+      "encode" : true,
+      "accessType" : "readonly",
+      "isExtended" : false
+    }, {
+      "id" : "$skip",
+      "dataType" : "string",
+      "encode" : true,
+      "accessType" : "readonly",
+      "isExtended" : false
+    }, {
+      "id" : "$expand",
+      "dataType" : "string",
+      "encode" : true,
+      "accessType" : "readonly",
+      "isExtended" : false
+    }, {
+      "id" : "$batchsize",
+      "dataType" : "string",
+      "encode" : true,
+      "accessType" : "readonly",
+      "isExtended" : false
+    }, {
+      "id" : "$batchid",
+      "dataType" : "string",
+      "encode" : true,
+      "accessType" : "readonly",
+      "isExtended" : false
+    } ],
+    "iMapping" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><mapper xmlns=\"http://www.kony.com/ns/mapper\">  <map inputpath=\"request_in\" outputpath=\"request_out\"/></mapper>",
+    "oMapping" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><mapper xmlns=\"http://www.kony.com/ns/mapper\">    <map inputpath=\"response_in\" outputpath=\"response_out\">        <map inputpath=\"ReasonCodes\" outputpath=\"ReasonCodes\">            <set-param inputpath=\"FieldWorkStatusReason\" outputpath=\"FieldWorkStatusReason\"/>            <set-param inputpath=\"Description\" outputpath=\"Description\"/>            <set-param inputpath=\"ReturnToControllerProcess\" outputpath=\"ReturnToControllerProcess\"/>            <set-param inputpath=\"UpdatedDateTime\" outputpath=\"UpdatedDateTime\"/>            <set-param inputpath=\"AlertEnabled\" outputpath=\"AlertEnabled\"/>        </map>    </map></mapper>",
+    "iVisualMappingData" : "{\"nodeDataArray\":[{\"isGroup\":true,\"key\":\"request_in\",\"text\":\"ReasonCodes\",\"xy\":\"150 100\",\"__gohashid\":24212},{\"isGroup\":true,\"key\":\"request_out\",\"text\":\"GasExtensionsOrchestration (1.9).getReasonCodesOrch\",\"xy\":\"770 100\",\"__gohashid\":24213}],\"linkDataArray\":[{\"from\":\"source\",\"to\":\"source:ReasonCodes\",\"fromPort\":\"source\",\"toPort\":\"source:ReasonCodes\",\"visible\":true,\"common\":false,\"__gohashid\":24226},{\"from\":\"source:ReasonCodes\",\"to\":\"source:ReasonCodes:fields\",\"fromPort\":\"source:ReasonCodes\",\"toPort\":\"source:ReasonCodes:fields\",\"visible\":true,\"common\":false,\"__gohashid\":24227},{\"from\":\"source:ReasonCodes:fields\",\"to\":\"source:ReasonCodes:FieldWorkStatusReason:\",\"fromPort\":\"source:ReasonCodes:fields\",\"toPort\":\"source:ReasonCodes:FieldWorkStatusReason:\",\"visible\":true,\"common\":false,\"__gohashid\":24228},{\"from\":\"source:ReasonCodes:fields\",\"to\":\"source:ReasonCodes:Description:\",\"fromPort\":\"source:ReasonCodes:fields\",\"toPort\":\"source:ReasonCodes:Description:\",\"visible\":true,\"common\":false,\"__gohashid\":24229},{\"from\":\"source:ReasonCodes:fields\",\"to\":\"source:ReasonCodes:ReturnToControllerProcess:\",\"fromPort\":\"source:ReasonCodes:fields\",\"toPort\":\"source:ReasonCodes:ReturnToControllerProcess:\",\"visible\":true,\"common\":false,\"__gohashid\":24230},{\"from\":\"source:ReasonCodes:fields\",\"to\":\"source:ReasonCodes:UpdatedDateTime:\",\"fromPort\":\"source:ReasonCodes:fields\",\"toPort\":\"source:ReasonCodes:UpdatedDateTime:\",\"visible\":true,\"common\":false,\"__gohashid\":24231},{\"from\":\"source:ReasonCodes:fields\",\"to\":\"source:ReasonCodes:AlertEnabled:\",\"fromPort\":\"source:ReasonCodes:fields\",\"toPort\":\"source:ReasonCodes:AlertEnabled:\",\"visible\":true,\"common\":false,\"__gohashid\":24232},{\"from\":\"target\",\"to\":\"target:parameters\",\"fromPort\":\"target\",\"toPort\":\"target:parameters\",\"visible\":true,\"common\":false,\"__gohashid\":24233},{\"from\":\"target:parameters\",\"to\":\"target:UpdatedDateTime:\",\"fromPort\":\"target:parameters\",\"toPort\":\"target:UpdatedDateTime:\",\"visible\":true,\"common\":false,\"__gohashid\":24234}],\"blockCount\":{\"variableCount\":0},\"variableMap\":{},\"xmlMappingOverride\":true}",
+    "oVisualMappingData" : "{\"nodeDataArray\":[{\"isGroup\":true,\"key\":\"response_out\",\"text\":\"ReasonCodes\",\"xy\":\"770 100\",\"__gohashid\":27388},{\"isGroup\":true,\"key\":\"response_in\",\"text\":\"GasExtensionsOrchestration (1.9).getReasonCodesOrch\",\"xy\":\"150 100\",\"__gohashid\":27389}],\"linkDataArray\":[{\"from\":\"target\",\"to\":\"target:ReasonCodes\",\"fromPort\":\"target\",\"toPort\":\"target:ReasonCodes\",\"visible\":true,\"common\":false,\"__gohashid\":27407},{\"from\":\"target:ReasonCodes\",\"to\":\"target:ReasonCodes:fields\",\"fromPort\":\"target:ReasonCodes\",\"toPort\":\"target:ReasonCodes:fields\",\"visible\":true,\"common\":false,\"__gohashid\":27408},{\"from\":\"target:ReasonCodes:fields\",\"to\":\"target:ReasonCodes:FieldWorkStatusReason:\",\"fromPort\":\"target:ReasonCodes:fields\",\"toPort\":\"target:ReasonCodes:FieldWorkStatusReason:\",\"visible\":true,\"common\":false,\"__gohashid\":27409},{\"from\":\"target:ReasonCodes:fields\",\"to\":\"target:ReasonCodes:Description:\",\"fromPort\":\"target:ReasonCodes:fields\",\"toPort\":\"target:ReasonCodes:Description:\",\"visible\":true,\"common\":false,\"__gohashid\":27410},{\"from\":\"target:ReasonCodes:fields\",\"to\":\"target:ReasonCodes:ReturnToControllerProcess:\",\"fromPort\":\"target:ReasonCodes:fields\",\"toPort\":\"target:ReasonCodes:ReturnToControllerProcess:\",\"visible\":true,\"common\":false,\"__gohashid\":27411},{\"from\":\"target:ReasonCodes:fields\",\"to\":\"target:ReasonCodes:UpdatedDateTime:\",\"fromPort\":\"target:ReasonCodes:fields\",\"toPort\":\"target:ReasonCodes:UpdatedDateTime:\",\"visible\":true,\"common\":false,\"__gohashid\":27412},{\"from\":\"target:ReasonCodes:fields\",\"to\":\"target:ReasonCodes:AlertEnabled:\",\"fromPort\":\"target:ReasonCodes:fields\",\"toPort\":\"target:ReasonCodes:AlertEnabled:\",\"visible\":true,\"common\":false,\"__gohashid\":27413},{\"from\":\"source\",\"to\":\"source:ReasonCodes\",\"fromPort\":\"source\",\"toPort\":\"source:ReasonCodes\",\"visible\":true,\"common\":false,\"__gohashid\":27414},{\"from\":\"source:ReasonCodes\",\"to\":\"source:ReasonCodes:parameters\",\"fromPort\":\"source:ReasonCodes\",\"toPort\":\"source:ReasonCodes:parameters\",\"visible\":true,\"common\":false,\"__gohashid\":27415},{\"from\":\"source:ReasonCodes:parameters\",\"to\":\"source:ReasonCodes:AlertEnabled:\",\"fromPort\":\"source:ReasonCodes:parameters\",\"toPort\":\"source:ReasonCodes:AlertEnabled:\",\"visible\":true,\"common\":false,\"__gohashid\":27416},{\"from\":\"source:ReasonCodes:parameters\",\"to\":\"source:ReasonCodes:Description:\",\"fromPort\":\"source:ReasonCodes:parameters\",\"toPort\":\"source:ReasonCodes:Description:\",\"visible\":true,\"common\":false,\"__gohashid\":27417},{\"from\":\"source:ReasonCodes:parameters\",\"to\":\"source:ReasonCodes:FieldWorkStatusReason:\",\"fromPort\":\"source:ReasonCodes:parameters\",\"toPort\":\"source:ReasonCodes:FieldWorkStatusReason:\",\"visible\":true,\"common\":false,\"__gohashid\":27418},{\"from\":\"source:ReasonCodes:parameters\",\"to\":\"source:ReasonCodes:ReturnToControllerProcess:\",\"fromPort\":\"source:ReasonCodes:parameters\",\"toPort\":\"source:ReasonCodes:ReturnToControllerProcess:\",\"visible\":true,\"common\":false,\"__gohashid\":27419},{\"from\":\"source:ReasonCodes:parameters\",\"to\":\"source:ReasonCodes:UpdatedDateTime:\",\"fromPort\":\"source:ReasonCodes:parameters\",\"toPort\":\"source:ReasonCodes:UpdatedDateTime:\",\"visible\":true,\"common\":false,\"__gohashid\":27420},{\"category\":\"Mapping\",\"from\":\"source:ReasonCodes:FieldWorkStatusReason:\",\"to\":\"target:ReasonCodes:FieldWorkStatusReason:\",\"fromPort\":\"source:ReasonCodes:FieldWorkStatusReason:\",\"toPort\":\"target:ReasonCodes:FieldWorkStatusReason:\",\"visible\":true,\"common\":true,\"__gohashid\":29842},{\"category\":\"Mapping\",\"from\":\"source:ReasonCodes:Description:\",\"to\":\"target:ReasonCodes:Description:\",\"fromPort\":\"source:ReasonCodes:Description:\",\"toPort\":\"target:ReasonCodes:Description:\",\"visible\":true,\"common\":true,\"__gohashid\":29849},{\"category\":\"Mapping\",\"from\":\"source:ReasonCodes:ReturnToControllerProcess:\",\"to\":\"target:ReasonCodes:ReturnToControllerProcess:\",\"fromPort\":\"source:ReasonCodes:ReturnToControllerProcess:\",\"toPort\":\"target:ReasonCodes:ReturnToControllerProcess:\",\"visible\":true,\"common\":true,\"__gohashid\":29856},{\"category\":\"Mapping\",\"from\":\"source:ReasonCodes:UpdatedDateTime:\",\"to\":\"target:ReasonCodes:UpdatedDateTime:\",\"fromPort\":\"source:ReasonCodes:UpdatedDateTime:\",\"toPort\":\"target:ReasonCodes:UpdatedDateTime:\",\"visible\":true,\"common\":true,\"__gohashid\":29863},{\"category\":\"Mapping\",\"from\":\"source:ReasonCodes:AlertEnabled:\",\"to\":\"target:ReasonCodes:AlertEnabled:\",\"fromPort\":\"source:ReasonCodes:AlertEnabled:\",\"toPort\":\"target:ReasonCodes:AlertEnabled:\",\"visible\":true,\"common\":true,\"__gohashid\":29870}],\"blockCount\":{\"variableCount\":0},\"variableMap\":{},\"xmlMappingOverride\":true}",
+    "applyCommonMapping" : false,
+    "applyRequestCommonMapping" : false,
+    "applyResponseCommonMapping" : false,
+    "backendMeta" : {
+      "serviceName" : "GasExtensionsOrchestration",
+      "serviceVersion" : "1.9",
+      "operationName" : "getReasonCodesOrch"
+    },
+    "relationshipHierarchyMapping" : {
+      "children" : [ ],
+      "name" : "ReasonCodes",
+      "actions" : {
+        "get" : true
+      },
+      "selected" : true
+    },
+    "requestXmlMappingOverride" : true,
+    "responseXmlMappingOverride" : true,
+    "mapperData" : [ {
+      "name" : "base mapper1",
+      "order" : 1,
+      "iMapping" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><mapper xmlns=\"http://www.kony.com/ns/mapper\">  <map inputpath=\"request_in\" outputpath=\"request_out\"/></mapper>",
+      "oMapping" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><mapper xmlns=\"http://www.kony.com/ns/mapper\">    <map inputpath=\"response_in\" outputpath=\"response_out\">        <map inputpath=\"ReasonCodes\" outputpath=\"ReasonCodes\">            <set-param inputpath=\"FieldWorkStatusReason\" outputpath=\"FieldWorkStatusReason\"/>            <set-param inputpath=\"Description\" outputpath=\"Description\"/>            <set-param inputpath=\"ReturnToControllerProcess\" outputpath=\"ReturnToControllerProcess\"/>            <set-param inputpath=\"UpdatedDateTime\" outputpath=\"UpdatedDateTime\"/>            <set-param inputpath=\"AlertEnabled\" outputpath=\"AlertEnabled\"/>        </map>    </map></mapper>",
+      "iVisualMappingData" : "{\"nodeDataArray\":[{\"isGroup\":true,\"key\":\"request_in\",\"text\":\"ReasonCodes\",\"xy\":\"150 100\",\"__gohashid\":24212},{\"isGroup\":true,\"key\":\"request_out\",\"text\":\"GasExtensionsOrchestration (1.9).getReasonCodesOrch\",\"xy\":\"770 100\",\"__gohashid\":24213}],\"linkDataArray\":[{\"from\":\"source\",\"to\":\"source:ReasonCodes\",\"fromPort\":\"source\",\"toPort\":\"source:ReasonCodes\",\"visible\":true,\"common\":false,\"__gohashid\":24226},{\"from\":\"source:ReasonCodes\",\"to\":\"source:ReasonCodes:fields\",\"fromPort\":\"source:ReasonCodes\",\"toPort\":\"source:ReasonCodes:fields\",\"visible\":true,\"common\":false,\"__gohashid\":24227},{\"from\":\"source:ReasonCodes:fields\",\"to\":\"source:ReasonCodes:FieldWorkStatusReason:\",\"fromPort\":\"source:ReasonCodes:fields\",\"toPort\":\"source:ReasonCodes:FieldWorkStatusReason:\",\"visible\":true,\"common\":false,\"__gohashid\":24228},{\"from\":\"source:ReasonCodes:fields\",\"to\":\"source:ReasonCodes:Description:\",\"fromPort\":\"source:ReasonCodes:fields\",\"toPort\":\"source:ReasonCodes:Description:\",\"visible\":true,\"common\":false,\"__gohashid\":24229},{\"from\":\"source:ReasonCodes:fields\",\"to\":\"source:ReasonCodes:ReturnToControllerProcess:\",\"fromPort\":\"source:ReasonCodes:fields\",\"toPort\":\"source:ReasonCodes:ReturnToControllerProcess:\",\"visible\":true,\"common\":false,\"__gohashid\":24230},{\"from\":\"source:ReasonCodes:fields\",\"to\":\"source:ReasonCodes:UpdatedDateTime:\",\"fromPort\":\"source:ReasonCodes:fields\",\"toPort\":\"source:ReasonCodes:UpdatedDateTime:\",\"visible\":true,\"common\":false,\"__gohashid\":24231},{\"from\":\"source:ReasonCodes:fields\",\"to\":\"source:ReasonCodes:AlertEnabled:\",\"fromPort\":\"source:ReasonCodes:fields\",\"toPort\":\"source:ReasonCodes:AlertEnabled:\",\"visible\":true,\"common\":false,\"__gohashid\":24232},{\"from\":\"target\",\"to\":\"target:parameters\",\"fromPort\":\"target\",\"toPort\":\"target:parameters\",\"visible\":true,\"common\":false,\"__gohashid\":24233},{\"from\":\"target:parameters\",\"to\":\"target:UpdatedDateTime:\",\"fromPort\":\"target:parameters\",\"toPort\":\"target:UpdatedDateTime:\",\"visible\":true,\"common\":false,\"__gohashid\":24234}],\"blockCount\":{\"variableCount\":0},\"variableMap\":{},\"xmlMappingOverride\":true}",
+      "oVisualMappingData" : "{\"nodeDataArray\":[{\"isGroup\":true,\"key\":\"response_out\",\"text\":\"ReasonCodes\",\"xy\":\"770 100\",\"__gohashid\":27388},{\"isGroup\":true,\"key\":\"response_in\",\"text\":\"GasExtensionsOrchestration (1.9).getReasonCodesOrch\",\"xy\":\"150 100\",\"__gohashid\":27389}],\"linkDataArray\":[{\"from\":\"target\",\"to\":\"target:ReasonCodes\",\"fromPort\":\"target\",\"toPort\":\"target:ReasonCodes\",\"visible\":true,\"common\":false,\"__gohashid\":27407},{\"from\":\"target:ReasonCodes\",\"to\":\"target:ReasonCodes:fields\",\"fromPort\":\"target:ReasonCodes\",\"toPort\":\"target:ReasonCodes:fields\",\"visible\":true,\"common\":false,\"__gohashid\":27408},{\"from\":\"target:ReasonCodes:fields\",\"to\":\"target:ReasonCodes:FieldWorkStatusReason:\",\"fromPort\":\"target:ReasonCodes:fields\",\"toPort\":\"target:ReasonCodes:FieldWorkStatusReason:\",\"visible\":true,\"common\":false,\"__gohashid\":27409},{\"from\":\"target:ReasonCodes:fields\",\"to\":\"target:ReasonCodes:Description:\",\"fromPort\":\"target:ReasonCodes:fields\",\"toPort\":\"target:ReasonCodes:Description:\",\"visible\":true,\"common\":false,\"__gohashid\":27410},{\"from\":\"target:ReasonCodes:fields\",\"to\":\"target:ReasonCodes:ReturnToControllerProcess:\",\"fromPort\":\"target:ReasonCodes:fields\",\"toPort\":\"target:ReasonCodes:ReturnToControllerProcess:\",\"visible\":true,\"common\":false,\"__gohashid\":27411},{\"from\":\"target:ReasonCodes:fields\",\"to\":\"target:ReasonCodes:UpdatedDateTime:\",\"fromPort\":\"target:ReasonCodes:fields\",\"toPort\":\"target:ReasonCodes:UpdatedDateTime:\",\"visible\":true,\"common\":false,\"__gohashid\":27412},{\"from\":\"target:ReasonCodes:fields\",\"to\":\"target:ReasonCodes:AlertEnabled:\",\"fromPort\":\"target:ReasonCodes:fields\",\"toPort\":\"target:ReasonCodes:AlertEnabled:\",\"visible\":true,\"common\":false,\"__gohashid\":27413},{\"from\":\"source\",\"to\":\"source:ReasonCodes\",\"fromPort\":\"source\",\"toPort\":\"source:ReasonCodes\",\"visible\":true,\"common\":false,\"__gohashid\":27414},{\"from\":\"source:ReasonCodes\",\"to\":\"source:ReasonCodes:parameters\",\"fromPort\":\"source:ReasonCodes\",\"toPort\":\"source:ReasonCodes:parameters\",\"visible\":true,\"common\":false,\"__gohashid\":27415},{\"from\":\"source:ReasonCodes:parameters\",\"to\":\"source:ReasonCodes:AlertEnabled:\",\"fromPort\":\"source:ReasonCodes:parameters\",\"toPort\":\"source:ReasonCodes:AlertEnabled:\",\"visible\":true,\"common\":false,\"__gohashid\":27416},{\"from\":\"source:ReasonCodes:parameters\",\"to\":\"source:ReasonCodes:Description:\",\"fromPort\":\"source:ReasonCodes:parameters\",\"toPort\":\"source:ReasonCodes:Description:\",\"visible\":true,\"common\":false,\"__gohashid\":27417},{\"from\":\"source:ReasonCodes:parameters\",\"to\":\"source:ReasonCodes:FieldWorkStatusReason:\",\"fromPort\":\"source:ReasonCodes:parameters\",\"toPort\":\"source:ReasonCodes:FieldWorkStatusReason:\",\"visible\":true,\"common\":false,\"__gohashid\":27418},{\"from\":\"source:ReasonCodes:parameters\",\"to\":\"source:ReasonCodes:ReturnToControllerProcess:\",\"fromPort\":\"source:ReasonCodes:parameters\",\"toPort\":\"source:ReasonCodes:ReturnToControllerProcess:\",\"visible\":true,\"common\":false,\"__gohashid\":27419},{\"from\":\"source:ReasonCodes:parameters\",\"to\":\"source:ReasonCodes:UpdatedDateTime:\",\"fromPort\":\"source:ReasonCodes:parameters\",\"toPort\":\"source:ReasonCodes:UpdatedDateTime:\",\"visible\":true,\"common\":false,\"__gohashid\":27420},{\"category\":\"Mapping\",\"from\":\"source:ReasonCodes:FieldWorkStatusReason:\",\"to\":\"target:ReasonCodes:FieldWorkStatusReason:\",\"fromPort\":\"source:ReasonCodes:FieldWorkStatusReason:\",\"toPort\":\"target:ReasonCodes:FieldWorkStatusReason:\",\"visible\":true,\"common\":true,\"__gohashid\":29842},{\"category\":\"Mapping\",\"from\":\"source:ReasonCodes:Description:\",\"to\":\"target:ReasonCodes:Description:\",\"fromPort\":\"source:ReasonCodes:Description:\",\"toPort\":\"target:ReasonCodes:Description:\",\"visible\":true,\"common\":true,\"__gohashid\":29849},{\"category\":\"Mapping\",\"from\":\"source:ReasonCodes:ReturnToControllerProcess:\",\"to\":\"target:ReasonCodes:ReturnToControllerProcess:\",\"fromPort\":\"source:ReasonCodes:ReturnToControllerProcess:\",\"toPort\":\"target:ReasonCodes:ReturnToControllerProcess:\",\"visible\":true,\"common\":true,\"__gohashid\":29856},{\"category\":\"Mapping\",\"from\":\"source:ReasonCodes:UpdatedDateTime:\",\"to\":\"target:ReasonCodes:UpdatedDateTime:\",\"fromPort\":\"source:ReasonCodes:UpdatedDateTime:\",\"toPort\":\"target:ReasonCodes:UpdatedDateTime:\",\"visible\":true,\"common\":true,\"__gohashid\":29863},{\"category\":\"Mapping\",\"from\":\"source:ReasonCodes:AlertEnabled:\",\"to\":\"target:ReasonCodes:AlertEnabled:\",\"fromPort\":\"source:ReasonCodes:AlertEnabled:\",\"toPort\":\"target:ReasonCodes:AlertEnabled:\",\"visible\":true,\"common\":true,\"__gohashid\":29870}],\"blockCount\":{\"variableCount\":0},\"variableMap\":{},\"xmlMappingOverride\":true}",
+      "requestXmlMappingOverride" : true,
+      "responseXmlMappingOverride" : true,
+      "disabled" : false,
+      "applyCommonMapping" : false,
+      "applyRequestCommonMapping" : false,
+      "applyResponseCommonMapping" : false
+    } ]
+  },
+  "enableFrontendUrl" : false,
+  "customVerb" : false
+}

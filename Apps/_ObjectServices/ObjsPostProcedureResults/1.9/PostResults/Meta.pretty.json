@@ -1,0 +1,19 @@
+{
+    "custom": false,
+    "customizable": false,
+    "entityProperties": {
+        "BatchMode": "none",
+        "backendMeta": {
+            
+        },
+        "designTimeBackendMeta": {
+            
+        }
+    },
+    "junction": false,
+    "type": "svcdriven",
+    "verbs": {
+        "create": "createMapping",
+        "delete": "deleteMapping"
+    }
+}

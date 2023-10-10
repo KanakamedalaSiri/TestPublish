@@ -1,0 +1,22 @@
+{
+    "custom": false,
+    "customizable": false,
+    "entityProperties": {
+        "BatchMode": "none",
+        "UpdateTimeStampField": {
+            "DateFormat": "yyyy-MM-dd'T'HH:mm:ss'Z'",
+            "Name": "UpdatedDateTime"
+        },
+        "backendMeta": {
+            
+        },
+        "designTimeBackendMeta": {
+            
+        }
+    },
+    "junction": false,
+    "type": "svcdriven",
+    "verbs": {
+        "get": "getMapping"
+    }
+}

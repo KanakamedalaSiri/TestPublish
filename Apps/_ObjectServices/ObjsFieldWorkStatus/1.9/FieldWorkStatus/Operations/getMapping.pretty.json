@@ -1,0 +1,110 @@
+{
+    "customVerb": false,
+    "enableFrontendUrl": false,
+    "operationConfig": {
+        "applyCommonMapping": false,
+        "applyRequestCommonMapping": true,
+        "applyResponseCommonMapping": false,
+        "backendMeta": {
+            "operationName": "getFieldWorkStatusOrch",
+            "serviceName": "GasExtensionsOrchestration",
+            "serviceVersion": "1.9"
+        },
+        "cachable": false,
+        "decodeResponseBody": false,
+        "httpMethod": "GET",
+        "iMapping": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><mapper xmlns=\"http://www.kony.com/ns/mapper\"><map inputpath=\"request_in\" outputpath=\"request_out\"><set-param inputpath=\"UpdatedDateTime\" outputpath=\"UpdatedDateTime\"/></map></mapper>",
+        "mapperData": [
+            {
+                "applyCommonMapping": false,
+                "applyRequestCommonMapping": true,
+                "applyResponseCommonMapping": false,
+                "disabled": false,
+                "iMapping": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><mapper xmlns=\"http://www.kony.com/ns/mapper\"><map inputpath=\"request_in\" outputpath=\"request_out\"><set-param inputpath=\"UpdatedDateTime\" outputpath=\"UpdatedDateTime\"/></map></mapper>",
+                "name": "base mapper1",
+                "oMapping": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><mapper xmlns=\"http://www.kony.com/ns/mapper\">            <map inputpath=\"response_in\" outputpath=\"response_out\">                        <map inputpath=\"FieldStatus/FieldWorkStatusCodesEntity\" outputpath=\"FieldWorkStatus\">                                    <set-param inputpath=\"../FieldWorkStatusWorkflow\" outputpath=\"FieldWorkStatusWorkflow\"/>                                    <set-param inputpath=\"CrewMandatory\" outputpath=\"CrewMandatory\"/>                                    <set-param inputpath=\"CrewFieldStatus\" outputpath=\"CrewFieldStatus\"/>                                    <set-param inputpath=\"SequenceNumber\" outputpath=\"SequenceNumber\"/>                                    <set-param inputpath=\"../UpdatedDateTime\" outputpath=\"UpdatedDateTime\"/>                                    <set-param inputpath=\"FieldWorkStatusCode\" outputpath=\"FieldWorkStatusCode\"/>                         <set-param inputpath=\"WRCommentRequired\" outputpath=\"WRCommentRequired\"/>                         <set-param inputpath=\"FieldStatusReasonRequired\" outputpath=\"FieldStatusReasonRequired\"/>                 </map>            </map></mapper>",
+                "oVisualMappingData": "{\"nodeDataArray\":[{\"isGroup\":true,\"key\":\"response_out\",\"text\":\"FieldWorkStatus\",\"xy\":\"770 100\",\"__gohashid\":70444},{\"isGroup\":true,\"key\":\"response_in\",\"text\":\"GasExtensionsOrchestration (1.9).getFieldWorkStatusOrch\",\"xy\":\"150 100\",\"__gohashid\":70445}],\"linkDataArray\":[{\"from\":\"target\",\"to\":\"target:FieldWorkStatus\",\"fromPort\":\"target\",\"toPort\":\"target:FieldWorkStatus\",\"visible\":true,\"common\":false,\"__gohashid\":70471},{\"from\":\"target:FieldWorkStatus\",\"to\":\"target:FieldWorkStatus:fields\",\"fromPort\":\"target:FieldWorkStatus\",\"toPort\":\"target:FieldWorkStatus:fields\",\"visible\":true,\"common\":false,\"__gohashid\":70472},{\"from\":\"target:FieldWorkStatus:fields\",\"to\":\"target:FieldWorkStatus:FieldWorkStatusWorkflow:\",\"fromPort\":\"target:FieldWorkStatus:fields\",\"toPort\":\"target:FieldWorkStatus:FieldWorkStatusWorkflow:\",\"visible\":true,\"common\":false,\"__gohashid\":70473},{\"from\":\"target:FieldWorkStatus:fields\",\"to\":\"target:FieldWorkStatus:CrewMandatory:\",\"fromPort\":\"target:FieldWorkStatus:fields\",\"toPort\":\"target:FieldWorkStatus:CrewMandatory:\",\"visible\":true,\"common\":false,\"__gohashid\":70474},{\"from\":\"target:FieldWorkStatus:fields\",\"to\":\"target:FieldWorkStatus:CrewFieldStatus:\",\"fromPort\":\"target:FieldWorkStatus:fields\",\"toPort\":\"target:FieldWorkStatus:CrewFieldStatus:\",\"visible\":true,\"common\":false,\"__gohashid\":70475},{\"from\":\"target:FieldWorkStatus:fields\",\"to\":\"target:FieldWorkStatus:SequenceNumber:\",\"fromPort\":\"target:FieldWorkStatus:fields\",\"toPort\":\"target:FieldWorkStatus:SequenceNumber:\",\"visible\":true,\"common\":false,\"__gohashid\":70476},{\"from\":\"target:FieldWorkStatus:fields\",\"to\":\"target:FieldWorkStatus:UpdatedDateTime:\",\"fromPort\":\"target:FieldWorkStatus:fields\",\"toPort\":\"target:FieldWorkStatus:UpdatedDateTime:\",\"visible\":true,\"common\":false,\"__gohashid\":70477},{\"from\":\"target:FieldWorkStatus:fields\",\"to\":\"target:FieldWorkStatus:FieldWorkStatusCode:\",\"fromPort\":\"target:FieldWorkStatus:fields\",\"toPort\":\"target:FieldWorkStatus:FieldWorkStatusCode:\",\"visible\":true,\"common\":false,\"__gohashid\":70478},{\"from\":\"target:FieldWorkStatus:fields\",\"to\":\"target:FieldWorkStatus:WRCommentRequired:\",\"fromPort\":\"target:FieldWorkStatus:fields\",\"toPort\":\"target:FieldWorkStatus:WRCommentRequired:\",\"visible\":true,\"common\":false,\"__gohashid\":70479},{\"from\":\"target:FieldWorkStatus:fields\",\"to\":\"target:FieldWorkStatus:FieldStatusReasonRequired:\",\"fromPort\":\"target:FieldWorkStatus:fields\",\"toPort\":\"target:FieldWorkStatus:FieldStatusReasonRequired:\",\"visible\":true,\"common\":false,\"__gohashid\":70480},{\"from\":\"source\",\"to\":\"source:FieldStatus\",\"fromPort\":\"source\",\"toPort\":\"source:FieldStatus\",\"visible\":true,\"common\":false,\"__gohashid\":70481},{\"from\":\"source:FieldStatus\",\"to\":\"source:FieldStatus:parameters\",\"fromPort\":\"source:FieldStatus\",\"toPort\":\"source:FieldStatus:parameters\",\"visible\":true,\"common\":false,\"__gohashid\":70482},{\"from\":\"source:FieldStatus:parameters\",\"to\":\"source:FieldStatus:FieldWorkStatusWorkflow:\",\"fromPort\":\"source:FieldStatus:parameters\",\"toPort\":\"source:FieldStatus:FieldWorkStatusWorkflow:\",\"visible\":true,\"common\":false,\"__gohashid\":70483},{\"from\":\"source:FieldStatus:parameters\",\"to\":\"source:FieldStatus:UpdatedDateTime:\",\"fromPort\":\"source:FieldStatus:parameters\",\"toPort\":\"source:FieldStatus:UpdatedDateTime:\",\"visible\":true,\"common\":false,\"__gohashid\":70484},{\"from\":\"source:FieldStatus\",\"to\":\"source:FieldStatus:FieldWorkStatusCodesEntity\",\"fromPort\":\"source:FieldStatus\",\"toPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity\",\"visible\":true,\"common\":false,\"__gohashid\":70485},{\"from\":\"source:FieldStatus:FieldWorkStatusCodesEntity\",\"to\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"fromPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity\",\"toPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"visible\":true,\"common\":false,\"__gohashid\":70486},{\"from\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"to\":\"source:FieldStatus:FieldWorkStatusCodesEntity:CrewFieldStatus:\",\"fromPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"toPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:CrewFieldStatus:\",\"visible\":true,\"common\":false,\"__gohashid\":70487},{\"from\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"to\":\"source:FieldStatus:FieldWorkStatusCodesEntity:CrewMandatory:\",\"fromPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"toPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:CrewMandatory:\",\"visible\":true,\"common\":false,\"__gohashid\":70488},{\"from\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"to\":\"source:FieldStatus:FieldWorkStatusCodesEntity:FieldStatusReasonRequired:\",\"fromPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"toPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:FieldStatusReasonRequired:\",\"visible\":true,\"common\":false,\"__gohashid\":70489},{\"from\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"to\":\"source:FieldStatus:FieldWorkStatusCodesEntity:FieldWorkStatusCode:\",\"fromPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"toPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:FieldWorkStatusCode:\",\"visible\":true,\"common\":false,\"__gohashid\":70490},{\"from\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"to\":\"source:FieldStatus:FieldWorkStatusCodesEntity:SequenceNumber:\",\"fromPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"toPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:SequenceNumber:\",\"visible\":true,\"common\":false,\"__gohashid\":70491},{\"from\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"to\":\"source:FieldStatus:FieldWorkStatusCodesEntity:WRCommentRequired:\",\"fromPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"toPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:WRCommentRequired:\",\"visible\":true,\"common\":false,\"__gohashid\":70492}],\"blockCount\":{\"variableCount\":0},\"variableMap\":{},\"xmlMappingOverride\":true}",
+                "order": 1,
+                "requestXmlMappingOverride": false,
+                "responseXmlMappingOverride": true
+            }
+        ],
+        "name": "getFieldWorkStatusOrch3966",
+        "oMapping": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><mapper xmlns=\"http://www.kony.com/ns/mapper\">            <map inputpath=\"response_in\" outputpath=\"response_out\">                        <map inputpath=\"FieldStatus/FieldWorkStatusCodesEntity\" outputpath=\"FieldWorkStatus\">                                    <set-param inputpath=\"../FieldWorkStatusWorkflow\" outputpath=\"FieldWorkStatusWorkflow\"/>                                    <set-param inputpath=\"CrewMandatory\" outputpath=\"CrewMandatory\"/>                                    <set-param inputpath=\"CrewFieldStatus\" outputpath=\"CrewFieldStatus\"/>                                    <set-param inputpath=\"SequenceNumber\" outputpath=\"SequenceNumber\"/>                                    <set-param inputpath=\"../UpdatedDateTime\" outputpath=\"UpdatedDateTime\"/>                                    <set-param inputpath=\"FieldWorkStatusCode\" outputpath=\"FieldWorkStatusCode\"/>                         <set-param inputpath=\"WRCommentRequired\" outputpath=\"WRCommentRequired\"/>                         <set-param inputpath=\"FieldStatusReasonRequired\" outputpath=\"FieldStatusReasonRequired\"/>                 </map>            </map></mapper>",
+        "oVisualMappingData": "{\"nodeDataArray\":[{\"isGroup\":true,\"key\":\"response_out\",\"text\":\"FieldWorkStatus\",\"xy\":\"770 100\",\"__gohashid\":70444},{\"isGroup\":true,\"key\":\"response_in\",\"text\":\"GasExtensionsOrchestration (1.9).getFieldWorkStatusOrch\",\"xy\":\"150 100\",\"__gohashid\":70445}],\"linkDataArray\":[{\"from\":\"target\",\"to\":\"target:FieldWorkStatus\",\"fromPort\":\"target\",\"toPort\":\"target:FieldWorkStatus\",\"visible\":true,\"common\":false,\"__gohashid\":70471},{\"from\":\"target:FieldWorkStatus\",\"to\":\"target:FieldWorkStatus:fields\",\"fromPort\":\"target:FieldWorkStatus\",\"toPort\":\"target:FieldWorkStatus:fields\",\"visible\":true,\"common\":false,\"__gohashid\":70472},{\"from\":\"target:FieldWorkStatus:fields\",\"to\":\"target:FieldWorkStatus:FieldWorkStatusWorkflow:\",\"fromPort\":\"target:FieldWorkStatus:fields\",\"toPort\":\"target:FieldWorkStatus:FieldWorkStatusWorkflow:\",\"visible\":true,\"common\":false,\"__gohashid\":70473},{\"from\":\"target:FieldWorkStatus:fields\",\"to\":\"target:FieldWorkStatus:CrewMandatory:\",\"fromPort\":\"target:FieldWorkStatus:fields\",\"toPort\":\"target:FieldWorkStatus:CrewMandatory:\",\"visible\":true,\"common\":false,\"__gohashid\":70474},{\"from\":\"target:FieldWorkStatus:fields\",\"to\":\"target:FieldWorkStatus:CrewFieldStatus:\",\"fromPort\":\"target:FieldWorkStatus:fields\",\"toPort\":\"target:FieldWorkStatus:CrewFieldStatus:\",\"visible\":true,\"common\":false,\"__gohashid\":70475},{\"from\":\"target:FieldWorkStatus:fields\",\"to\":\"target:FieldWorkStatus:SequenceNumber:\",\"fromPort\":\"target:FieldWorkStatus:fields\",\"toPort\":\"target:FieldWorkStatus:SequenceNumber:\",\"visible\":true,\"common\":false,\"__gohashid\":70476},{\"from\":\"target:FieldWorkStatus:fields\",\"to\":\"target:FieldWorkStatus:UpdatedDateTime:\",\"fromPort\":\"target:FieldWorkStatus:fields\",\"toPort\":\"target:FieldWorkStatus:UpdatedDateTime:\",\"visible\":true,\"common\":false,\"__gohashid\":70477},{\"from\":\"target:FieldWorkStatus:fields\",\"to\":\"target:FieldWorkStatus:FieldWorkStatusCode:\",\"fromPort\":\"target:FieldWorkStatus:fields\",\"toPort\":\"target:FieldWorkStatus:FieldWorkStatusCode:\",\"visible\":true,\"common\":false,\"__gohashid\":70478},{\"from\":\"target:FieldWorkStatus:fields\",\"to\":\"target:FieldWorkStatus:WRCommentRequired:\",\"fromPort\":\"target:FieldWorkStatus:fields\",\"toPort\":\"target:FieldWorkStatus:WRCommentRequired:\",\"visible\":true,\"common\":false,\"__gohashid\":70479},{\"from\":\"target:FieldWorkStatus:fields\",\"to\":\"target:FieldWorkStatus:FieldStatusReasonRequired:\",\"fromPort\":\"target:FieldWorkStatus:fields\",\"toPort\":\"target:FieldWorkStatus:FieldStatusReasonRequired:\",\"visible\":true,\"common\":false,\"__gohashid\":70480},{\"from\":\"source\",\"to\":\"source:FieldStatus\",\"fromPort\":\"source\",\"toPort\":\"source:FieldStatus\",\"visible\":true,\"common\":false,\"__gohashid\":70481},{\"from\":\"source:FieldStatus\",\"to\":\"source:FieldStatus:parameters\",\"fromPort\":\"source:FieldStatus\",\"toPort\":\"source:FieldStatus:parameters\",\"visible\":true,\"common\":false,\"__gohashid\":70482},{\"from\":\"source:FieldStatus:parameters\",\"to\":\"source:FieldStatus:FieldWorkStatusWorkflow:\",\"fromPort\":\"source:FieldStatus:parameters\",\"toPort\":\"source:FieldStatus:FieldWorkStatusWorkflow:\",\"visible\":true,\"common\":false,\"__gohashid\":70483},{\"from\":\"source:FieldStatus:parameters\",\"to\":\"source:FieldStatus:UpdatedDateTime:\",\"fromPort\":\"source:FieldStatus:parameters\",\"toPort\":\"source:FieldStatus:UpdatedDateTime:\",\"visible\":true,\"common\":false,\"__gohashid\":70484},{\"from\":\"source:FieldStatus\",\"to\":\"source:FieldStatus:FieldWorkStatusCodesEntity\",\"fromPort\":\"source:FieldStatus\",\"toPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity\",\"visible\":true,\"common\":false,\"__gohashid\":70485},{\"from\":\"source:FieldStatus:FieldWorkStatusCodesEntity\",\"to\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"fromPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity\",\"toPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"visible\":true,\"common\":false,\"__gohashid\":70486},{\"from\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"to\":\"source:FieldStatus:FieldWorkStatusCodesEntity:CrewFieldStatus:\",\"fromPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"toPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:CrewFieldStatus:\",\"visible\":true,\"common\":false,\"__gohashid\":70487},{\"from\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"to\":\"source:FieldStatus:FieldWorkStatusCodesEntity:CrewMandatory:\",\"fromPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"toPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:CrewMandatory:\",\"visible\":true,\"common\":false,\"__gohashid\":70488},{\"from\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"to\":\"source:FieldStatus:FieldWorkStatusCodesEntity:FieldStatusReasonRequired:\",\"fromPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"toPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:FieldStatusReasonRequired:\",\"visible\":true,\"common\":false,\"__gohashid\":70489},{\"from\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"to\":\"source:FieldStatus:FieldWorkStatusCodesEntity:FieldWorkStatusCode:\",\"fromPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"toPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:FieldWorkStatusCode:\",\"visible\":true,\"common\":false,\"__gohashid\":70490},{\"from\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"to\":\"source:FieldStatus:FieldWorkStatusCodesEntity:SequenceNumber:\",\"fromPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"toPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:SequenceNumber:\",\"visible\":true,\"common\":false,\"__gohashid\":70491},{\"from\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"to\":\"source:FieldStatus:FieldWorkStatusCodesEntity:WRCommentRequired:\",\"fromPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:parameters\",\"toPort\":\"source:FieldStatus:FieldWorkStatusCodesEntity:WRCommentRequired:\",\"visible\":true,\"common\":false,\"__gohashid\":70492}],\"blockCount\":{\"variableCount\":0},\"variableMap\":{},\"xmlMappingOverride\":true}",
+        "odata": [
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$select",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$filter",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$orderby",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$top",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$skip",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$expand",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$batchsize",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$batchid",
+                "isExtended": false
+            }
+        ],
+        "relationshipHierarchyMapping": {
+            "actions": {
+                "get": true
+            },
+            "children": [
+                
+            ],
+            "name": "FieldWorkStatus",
+            "selected": true
+        },
+        "requestXmlMappingOverride": false,
+        "responseEncoding": "UTF-8",
+        "responseXmlMappingOverride": true,
+        "security": "authorized_app_user",
+        "smsEnabled": false,
+        "type": "MappedToBackend"
+    }
+}

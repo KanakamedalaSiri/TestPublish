@@ -1,0 +1,13 @@
+[ {
+  "sourceObject" : "Group",
+  "targetObject" : "Question",
+  "relationshipKeys" : [ {
+    "sourceField" : "GID",
+    "targetField" : "GID",
+    "etag" : "91966b04-95c6-4c38-b648-9f476d071530"
+  } ],
+  "name" : "Group_Question",
+  "type" : "OneToMany",
+  "custom" : false,
+  "cascadeDelete" : true
+} ]

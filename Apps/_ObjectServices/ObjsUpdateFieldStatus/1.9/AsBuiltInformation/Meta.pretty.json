@@ -1,0 +1,18 @@
+{
+    "custom": false,
+    "customizable": false,
+    "entityProperties": {
+        "BatchMode": "buffer",
+        "backendMeta": {
+            
+        },
+        "designTimeBackendMeta": {
+            
+        }
+    },
+    "junction": false,
+    "type": "svcdriven",
+    "verbs": {
+        "create": "createMapping"
+    }
+}

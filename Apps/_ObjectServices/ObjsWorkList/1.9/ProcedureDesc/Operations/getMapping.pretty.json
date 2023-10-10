@@ -1,0 +1,108 @@
+{
+    "customVerb": false,
+    "enableFrontendUrl": false,
+    "operationConfig": {
+        "applyCommonMapping": false,
+        "applyRequestCommonMapping": true,
+        "applyResponseCommonMapping": false,
+        "backendMeta": {
+            "operationName": "getProcedureName",
+            "serviceName": "OMPAPI",
+            "serviceVersion": "1.9"
+        },
+        "cachable": false,
+        "decodeResponseBody": false,
+        "httpMethod": "GET",
+        "mapperData": [
+            {
+                "applyCommonMapping": false,
+                "applyRequestCommonMapping": true,
+                "applyResponseCommonMapping": false,
+                "disabled": false,
+                "name": "base mapper1",
+                "oMapping": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><mapper xmlns=\"http://www.kony.com/ns/mapper\">        <map inputpath=\"response_in\" outputpath=\"response_out\">                <map inputpath=\"ProceduresDesc\" outputpath=\"ProcedureDesc\">                <set-param inputpath=\"ProcedureCode\" outputpath=\"ProcedureCode\"/>               <set-param inputpath=\"Description\" outputpath=\"Description\"/>               <set-param inputpath=\"ProcedureType\" outputpath=\"ProcedureType\"/>        </map>    </map></mapper>",
+                "oVisualMappingData": "{\"nodeDataArray\":[{\"isGroup\":true,\"key\":\"response_out\",\"text\":\"ProcedureDesc\",\"xy\":\"770 100\"},{\"isGroup\":true,\"key\":\"response_in\",\"text\":\"OMPAPI (1.9).getProcedureName\",\"xy\":\"150 100\"}],\"linkDataArray\":[{\"from\":\"target\",\"to\":\"target:ProcedureDesc\",\"fromPort\":\"target\",\"toPort\":\"target:ProcedureDesc\",\"visible\":true,\"common\":false},{\"from\":\"target:ProcedureDesc\",\"to\":\"target:ProcedureDesc:fields\",\"fromPort\":\"target:ProcedureDesc\",\"toPort\":\"target:ProcedureDesc:fields\",\"visible\":true,\"common\":false},{\"from\":\"target:ProcedureDesc:fields\",\"to\":\"target:ProcedureDesc:ProcedureCode:\",\"fromPort\":\"target:ProcedureDesc:fields\",\"toPort\":\"target:ProcedureDesc:ProcedureCode:\",\"visible\":true,\"common\":false},{\"from\":\"target:ProcedureDesc:fields\",\"to\":\"target:ProcedureDesc:Description:\",\"fromPort\":\"target:ProcedureDesc:fields\",\"toPort\":\"target:ProcedureDesc:Description:\",\"visible\":true,\"common\":false},{\"from\":\"target:ProcedureDesc:fields\",\"to\":\"target:ProcedureDesc:ProcedureType:\",\"fromPort\":\"target:ProcedureDesc:fields\",\"toPort\":\"target:ProcedureDesc:ProcedureType:\",\"visible\":true,\"common\":false}],\"blockCount\":{\"variableCount\":0},\"variableMap\":{},\"xmlMappingOverride\":true}",
+                "order": 1,
+                "requestXmlMappingOverride": false,
+                "responseXmlMappingOverride": true
+            }
+        ],
+        "name": "getProcedureName9892",
+        "oMapping": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><mapper xmlns=\"http://www.kony.com/ns/mapper\">        <map inputpath=\"response_in\" outputpath=\"response_out\">                <map inputpath=\"ProceduresDesc\" outputpath=\"ProcedureDesc\">                <set-param inputpath=\"ProcedureCode\" outputpath=\"ProcedureCode\"/>               <set-param inputpath=\"Description\" outputpath=\"Description\"/>               <set-param inputpath=\"ProcedureType\" outputpath=\"ProcedureType\"/>        </map>    </map></mapper>",
+        "oVisualMappingData": "{\"nodeDataArray\":[{\"isGroup\":true,\"key\":\"response_out\",\"text\":\"ProcedureDesc\",\"xy\":\"770 100\"},{\"isGroup\":true,\"key\":\"response_in\",\"text\":\"OMPAPI (1.9).getProcedureName\",\"xy\":\"150 100\"}],\"linkDataArray\":[{\"from\":\"target\",\"to\":\"target:ProcedureDesc\",\"fromPort\":\"target\",\"toPort\":\"target:ProcedureDesc\",\"visible\":true,\"common\":false},{\"from\":\"target:ProcedureDesc\",\"to\":\"target:ProcedureDesc:fields\",\"fromPort\":\"target:ProcedureDesc\",\"toPort\":\"target:ProcedureDesc:fields\",\"visible\":true,\"common\":false},{\"from\":\"target:ProcedureDesc:fields\",\"to\":\"target:ProcedureDesc:ProcedureCode:\",\"fromPort\":\"target:ProcedureDesc:fields\",\"toPort\":\"target:ProcedureDesc:ProcedureCode:\",\"visible\":true,\"common\":false},{\"from\":\"target:ProcedureDesc:fields\",\"to\":\"target:ProcedureDesc:Description:\",\"fromPort\":\"target:ProcedureDesc:fields\",\"toPort\":\"target:ProcedureDesc:Description:\",\"visible\":true,\"common\":false},{\"from\":\"target:ProcedureDesc:fields\",\"to\":\"target:ProcedureDesc:ProcedureType:\",\"fromPort\":\"target:ProcedureDesc:fields\",\"toPort\":\"target:ProcedureDesc:ProcedureType:\",\"visible\":true,\"common\":false}],\"blockCount\":{\"variableCount\":0},\"variableMap\":{},\"xmlMappingOverride\":true}",
+        "odata": [
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$select",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$filter",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$orderby",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$top",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$skip",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$expand",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$batchsize",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$batchid",
+                "isExtended": false
+            }
+        ],
+        "relationshipHierarchyMapping": {
+            "actions": {
+                "get": true
+            },
+            "children": [
+                
+            ],
+            "name": "ProcedureDesc",
+            "selected": true
+        },
+        "requestXmlMappingOverride": false,
+        "responseEncoding": "UTF-8",
+        "responseXmlMappingOverride": true,
+        "security": "authorized_app_user",
+        "smsEnabled": false,
+        "type": "MappedToBackend"
+    }
+}

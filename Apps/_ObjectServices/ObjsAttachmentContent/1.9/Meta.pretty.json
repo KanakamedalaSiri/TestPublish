@@ -1,0 +1,16 @@
+{
+    "config": {
+        "conflict_policy": "none",
+        "delete_strategy": "soft-delete",
+        "metadataSecurity": "authorized_app_user",
+        "offline": true,
+        "uploadCache": false
+    },
+    "empty": true,
+    "jars": [
+        {
+            "name": "GASExtentionVolt.jar",
+            "type": "jar"
+        }
+    ]
+}

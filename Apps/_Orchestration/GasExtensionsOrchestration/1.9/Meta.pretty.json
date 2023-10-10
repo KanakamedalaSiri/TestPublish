@@ -1,0 +1,10 @@
+{
+    "empty": true,
+    "jars": [
+        {
+            "name": "GASExtentionVolt.jar",
+            "type": "jar"
+        }
+    ],
+    "serviceType": "orchestration"
+}

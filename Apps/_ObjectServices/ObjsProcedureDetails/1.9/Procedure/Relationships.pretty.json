@@ -1,0 +1,17 @@
+[
+    {
+        "cascadeDelete": true,
+        "custom": false,
+        "name": "Procedure_Group",
+        "relationshipKeys": [
+            {
+                "etag": "1a4075fc-7f1f-42df-ba85-9170ba6be8f3",
+                "sourceField": "PID",
+                "targetField": "PID"
+            }
+        ],
+        "sourceObject": "Procedure",
+        "targetObject": "Group",
+        "type": "OneToMany"
+    }
+]

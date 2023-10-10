@@ -1,0 +1,95 @@
+{
+  "operationConfig" : {
+    "name" : "getAttributesInfoOrch2920",
+    "type" : "MappedToBackend",
+    "cachable" : false,
+    "smsEnabled" : false,
+    "security" : "authorized_app_user",
+    "responseEncoding" : "UTF-8",
+    "httpMethod" : "GET",
+    "decodeResponseBody" : false,
+    "odata" : [ {
+      "id" : "$select",
+      "dataType" : "string",
+      "encode" : true,
+      "accessType" : "readonly",
+      "isExtended" : false
+    }, {
+      "id" : "$filter",
+      "dataType" : "string",
+      "encode" : true,
+      "accessType" : "readonly",
+      "isExtended" : false
+    }, {
+      "id" : "$orderby",
+      "dataType" : "string",
+      "encode" : true,
+      "accessType" : "readonly",
+      "isExtended" : false
+    }, {
+      "id" : "$top",
+      "dataType" : "string",
+      "encode" : true,
+      "accessType" : "readonly",
+      "isExtended" : false
+    }, {
+      "id" : "$skip",
+      "dataType" : "string",
+      "encode" : true,
+      "accessType" : "readonly",
+      "isExtended" : false
+    }, {
+      "id" : "$expand",
+      "dataType" : "string",
+      "encode" : true,
+      "accessType" : "readonly",
+      "isExtended" : false
+    }, {
+      "id" : "$batchsize",
+      "dataType" : "string",
+      "encode" : true,
+      "accessType" : "readonly",
+      "isExtended" : false
+    }, {
+      "id" : "$batchid",
+      "dataType" : "string",
+      "encode" : true,
+      "accessType" : "readonly",
+      "isExtended" : false
+    } ],
+    "oMapping" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><mapper xmlns=\"http://www.kony.com/ns/mapper\">  <map inputpath=\"response_in\" outputpath=\"response_out\">    <map inputpath=\"Attributes\" outputpath=\"AttributesInfo\">      <set-param inputpath=\"AttributeCode\" outputpath=\"AttributeCode\"/>      <set-param inputpath=\"AttributeName\" outputpath=\"AttributeName\"/>      <set-param inputpath=\"Description\" outputpath=\"Description\"/>    </map>  </map></mapper>",
+    "oVisualMappingData" : "{\"nodeDataArray\":[{\"isGroup\":true,\"key\":\"response_out\",\"text\":\"AttributesInfo\",\"xy\":\"770 100\",\"__gohashid\":11162},{\"isGroup\":true,\"key\":\"response_in\",\"text\":\"GasExtensionsOrchestration (1.9).getAttributesInfoOrch\",\"xy\":\"150 100\",\"__gohashid\":11163}],\"linkDataArray\":[{\"from\":\"target\",\"to\":\"target:AttributesInfo\",\"fromPort\":\"target\",\"toPort\":\"target:AttributesInfo\",\"visible\":true,\"common\":false,\"__gohashid\":11177},{\"from\":\"target:AttributesInfo\",\"to\":\"target:AttributesInfo:fields\",\"fromPort\":\"target:AttributesInfo\",\"toPort\":\"target:AttributesInfo:fields\",\"visible\":true,\"common\":false,\"__gohashid\":11178},{\"from\":\"target:AttributesInfo:fields\",\"to\":\"target:AttributesInfo:AttributeCode:\",\"fromPort\":\"target:AttributesInfo:fields\",\"toPort\":\"target:AttributesInfo:AttributeCode:\",\"visible\":true,\"common\":false,\"__gohashid\":11179},{\"from\":\"target:AttributesInfo:fields\",\"to\":\"target:AttributesInfo:AttributeName:\",\"fromPort\":\"target:AttributesInfo:fields\",\"toPort\":\"target:AttributesInfo:AttributeName:\",\"visible\":true,\"common\":false,\"__gohashid\":11180},{\"from\":\"target:AttributesInfo:fields\",\"to\":\"target:AttributesInfo:Description:\",\"fromPort\":\"target:AttributesInfo:fields\",\"toPort\":\"target:AttributesInfo:Description:\",\"visible\":true,\"common\":false,\"__gohashid\":11181},{\"from\":\"source\",\"to\":\"source:Attributes\",\"fromPort\":\"source\",\"toPort\":\"source:Attributes\",\"visible\":true,\"common\":false,\"__gohashid\":11182},{\"from\":\"source:Attributes\",\"to\":\"source:Attributes:parameters\",\"fromPort\":\"source:Attributes\",\"toPort\":\"source:Attributes:parameters\",\"visible\":true,\"common\":false,\"__gohashid\":11183},{\"from\":\"source:Attributes:parameters\",\"to\":\"source:Attributes:AttributeCode:\",\"fromPort\":\"source:Attributes:parameters\",\"toPort\":\"source:Attributes:AttributeCode:\",\"visible\":true,\"common\":false,\"__gohashid\":11184},{\"from\":\"source:Attributes:parameters\",\"to\":\"source:Attributes:AttributeName:\",\"fromPort\":\"source:Attributes:parameters\",\"toPort\":\"source:Attributes:AttributeName:\",\"visible\":true,\"common\":false,\"__gohashid\":11185},{\"from\":\"source:Attributes:parameters\",\"to\":\"source:Attributes:Description:\",\"fromPort\":\"source:Attributes:parameters\",\"toPort\":\"source:Attributes:Description:\",\"visible\":true,\"common\":false,\"__gohashid\":11186}],\"blockCount\":{\"variableCount\":0},\"variableMap\":{},\"xmlMappingOverride\":true}",
+    "applyCommonMapping" : false,
+    "applyRequestCommonMapping" : true,
+    "applyResponseCommonMapping" : false,
+    "backendMeta" : {
+      "serviceName" : "GasExtensionsOrchestration",
+      "serviceVersion" : "1.9",
+      "operationName" : "getAttributesInfoOrch"
+    },
+    "relationshipHierarchyMapping" : {
+      "children" : [ ],
+      "name" : "AttributesInfo",
+      "actions" : {
+        "get" : true
+      },
+      "selected" : true
+    },
+    "requestXmlMappingOverride" : false,
+    "responseXmlMappingOverride" : true,
+    "mapperData" : [ {
+      "name" : "base mapper1",
+      "order" : 1,
+      "oMapping" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><mapper xmlns=\"http://www.kony.com/ns/mapper\">  <map inputpath=\"response_in\" outputpath=\"response_out\">    <map inputpath=\"Attributes\" outputpath=\"AttributesInfo\">      <set-param inputpath=\"AttributeCode\" outputpath=\"AttributeCode\"/>      <set-param inputpath=\"AttributeName\" outputpath=\"AttributeName\"/>      <set-param inputpath=\"Description\" outputpath=\"Description\"/>    </map>  </map></mapper>",
+      "oVisualMappingData" : "{\"nodeDataArray\":[{\"isGroup\":true,\"key\":\"response_out\",\"text\":\"AttributesInfo\",\"xy\":\"770 100\",\"__gohashid\":11162},{\"isGroup\":true,\"key\":\"response_in\",\"text\":\"GasExtensionsOrchestration (1.9).getAttributesInfoOrch\",\"xy\":\"150 100\",\"__gohashid\":11163}],\"linkDataArray\":[{\"from\":\"target\",\"to\":\"target:AttributesInfo\",\"fromPort\":\"target\",\"toPort\":\"target:AttributesInfo\",\"visible\":true,\"common\":false,\"__gohashid\":11177},{\"from\":\"target:AttributesInfo\",\"to\":\"target:AttributesInfo:fields\",\"fromPort\":\"target:AttributesInfo\",\"toPort\":\"target:AttributesInfo:fields\",\"visible\":true,\"common\":false,\"__gohashid\":11178},{\"from\":\"target:AttributesInfo:fields\",\"to\":\"target:AttributesInfo:AttributeCode:\",\"fromPort\":\"target:AttributesInfo:fields\",\"toPort\":\"target:AttributesInfo:AttributeCode:\",\"visible\":true,\"common\":false,\"__gohashid\":11179},{\"from\":\"target:AttributesInfo:fields\",\"to\":\"target:AttributesInfo:AttributeName:\",\"fromPort\":\"target:AttributesInfo:fields\",\"toPort\":\"target:AttributesInfo:AttributeName:\",\"visible\":true,\"common\":false,\"__gohashid\":11180},{\"from\":\"target:AttributesInfo:fields\",\"to\":\"target:AttributesInfo:Description:\",\"fromPort\":\"target:AttributesInfo:fields\",\"toPort\":\"target:AttributesInfo:Description:\",\"visible\":true,\"common\":false,\"__gohashid\":11181},{\"from\":\"source\",\"to\":\"source:Attributes\",\"fromPort\":\"source\",\"toPort\":\"source:Attributes\",\"visible\":true,\"common\":false,\"__gohashid\":11182},{\"from\":\"source:Attributes\",\"to\":\"source:Attributes:parameters\",\"fromPort\":\"source:Attributes\",\"toPort\":\"source:Attributes:parameters\",\"visible\":true,\"common\":false,\"__gohashid\":11183},{\"from\":\"source:Attributes:parameters\",\"to\":\"source:Attributes:AttributeCode:\",\"fromPort\":\"source:Attributes:parameters\",\"toPort\":\"source:Attributes:AttributeCode:\",\"visible\":true,\"common\":false,\"__gohashid\":11184},{\"from\":\"source:Attributes:parameters\",\"to\":\"source:Attributes:AttributeName:\",\"fromPort\":\"source:Attributes:parameters\",\"toPort\":\"source:Attributes:AttributeName:\",\"visible\":true,\"common\":false,\"__gohashid\":11185},{\"from\":\"source:Attributes:parameters\",\"to\":\"source:Attributes:Description:\",\"fromPort\":\"source:Attributes:parameters\",\"toPort\":\"source:Attributes:Description:\",\"visible\":true,\"common\":false,\"__gohashid\":11186}],\"blockCount\":{\"variableCount\":0},\"variableMap\":{},\"xmlMappingOverride\":true}",
+      "requestXmlMappingOverride" : false,
+      "responseXmlMappingOverride" : true,
+      "disabled" : false,
+      "applyCommonMapping" : false,
+      "applyRequestCommonMapping" : true,
+      "applyResponseCommonMapping" : false
+    } ]
+  },
+  "enableFrontendUrl" : false,
+  "customVerb" : false
+}

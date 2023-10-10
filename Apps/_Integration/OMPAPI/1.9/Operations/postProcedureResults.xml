@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service serviceGroup="" cachable="false" cacheduration="" customOperation="false" description="" endpoint="default" groupType="" id="postProcedureResults" passwordencrypted="false" security="authorized_app_user" type="jsonConnector" smscode="" smsenabled="false">
+    <service-config>
+        <config-param api-version="" appid="" name="preprocessorname" value=""/>
+        <config-param api-version="" appid="" name="postprocessorname" value=""/>
+        <config-param api-version="" appid="" name="preprocessorJS" value=""/>
+        <config-param api-version="" appid="" name="postprocessorJS" value=""/>
+        <config-param api-version="" appid="" name="preprocessorRules" value=""/>
+        <config-param api-version="" appid="" name="postprocessorRules" value=""/>
+        <config-param api-version="" appid="" name="kony_http_supported_methods" value="POST"/>
+        <config-param api-version="" appid="" name="endpointUrl" value="https://webapi-dev.coned.com/OMPServerGasXdev/OMPServer/arm/v22/workrequest/id/$WorkRequestGlobalId/inspectionresults"/>
+        <config-param api-version="" appid="" name="ignorehttpproxy" value="true"/>
+        <config-param api-version="" appid="" name="http.method" value="PATCH"/>
+        <config-param api-version="" appid="" name="dataObjectName" value=""/>
+        <config-param api-version="" appid="" name="sockettimeout" value="120000"/>
+        <config-param api-version="" appid="" name="responseEncoding" value="UTF-8"/>
+        <config-param api-version="" appid="" name="isembedxmlpresent" value="false"/>
+        <config-param api-version="" appid="" name="retrycount" value="0"/>
+        <config-param api-version="" appid="" name="identityProvider" value="ConEdOMPAPILogin"/>
+        <config-param api-version="" appid="" name="identityProviderType" value="custom"/>
+    </service-config>
+    <service-input passthrough="false" isExtended="false">
+        <header datatype="" name="" passthrough="false" isExtended="false">
+            <param datatype="string" defaultvalue="" description="" encode="false" format="None" formatvalue="" name="Accept" order="" paramOrder="0" parentOrder="0" sms-name="" src="constant" sourcevalue="application/json" srcformatvalue="" target="" targetdatatype="" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="false" format="None" formatvalue="" name="Ocp-Apim-Subscription-Key" order="" paramOrder="0" parentOrder="0" sms-name="" src="identity" sourcevalue="ConEdOMPAPILogin.security.key" srcformatvalue="" target="" targetdatatype="" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="false" format="None" formatvalue="" name="Authorization" order="" paramOrder="0" parentOrder="0" sms-name="" src="identity" sourcevalue="ConEdOMPAPILogin.security.auth" srcformatvalue="" target="" targetdatatype="" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="false" format="None" formatvalue="" name="ARM-OMP-Parameters" order="" paramOrder="0" parentOrder="0" sms-name="" src="identity" sourcevalue="ConEdOMPAPILogin.security.armomp" srcformatvalue="" target="" targetdatatype="" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+        </header>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="QID" order="" paramOrder="1" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="SUfeSF9EVj" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="StepCode" order="" paramOrder="2" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="VENT2PIPE" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="StepDescription" order="" paramOrder="3" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="StepActualDateTime" order="" paramOrder="4" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="2019-06-17T22:00:12.275Z" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="StepCompletionDateTime" order="" paramOrder="5" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="2019-06-17T22:00:12.275Z" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="CrewID" order="" paramOrder="6" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="HENIKA" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="Comment" order="" paramOrder="7" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="Instruction" order="" paramOrder="8" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="2\&quot; Vent Piping has Proper Termination?" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="Result" order="" paramOrder="9" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="YES" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="ResultDescription" order="" paramOrder="10" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="Yes" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="ProcID" order="" paramOrder="11" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="INSAPT" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="ProcVersion" order="" paramOrder="12" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="1" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="WorkRequestGlobalId" order="" paramOrder="13" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="ARM~729" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="ProcedureStepId" order="" paramOrder="14" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="INSERT_STEP" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="FacilityId" order="" paramOrder="15" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="ARM~41772" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="FacilityType" order="" paramOrder="16" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="RSSTAGE" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="StepCompletedByPersonNumber" order="" paramOrder="17" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="1259" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="ProcedureStepUniqueId" order="" paramOrder="18" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="flexSUfeSF9EVj" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="GID" order="" paramOrder="19" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="S7kPA3w9sO" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="AssetID" order="" paramOrder="20" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="ARM~41772" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="IsFacility" order="" paramOrder="21" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="true" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="RootFacilityGlobalId" order="" paramOrder="22" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="ARM~41310" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="AssetType" order="" paramOrder="23" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="RSSTAGE" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="AssetName" order="" paramOrder="24" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="GR-140-D" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <template-param datatype="" defaultvalue="            {&#10;    &quot;ProcedureCode&quot;: &quot;$ProcID&quot;,&#10;    &quot;ProcedureVersion&quot;: $ProcVersion,&#10; &#10;    #set ($rfGID = [])&#10;            #foreach( $rid in $RootFacilityGlobalId.split(&quot;[~]&quot;) )&#10;              #set($bar = $rfGID.add($rid))&#10;         #end &#10;    &quot;FacilityOrigSourceCode&quot;: &quot;$rfGID.get(0)&quot;,&#10;    &quot;FacilityOrigID&quot;: &quot;$rfGID.get(1)&quot;,&#10;    &quot;ARMFacilityID&quot;: &quot;&quot;,&#10;    &quot;ARMFacilityType&quot;: &quot;&quot;,&#10;    &quot;ARMSurveyAreaID&quot;: &quot;&quot;,&#10;    &quot;ARMSurveyAreaType&quot;: &quot;&quot;,&#10;    &quot;ProcedureSteps&quot;: [&#10;        {&#10;          &#10;            &quot;ProcedureStepUniquelD&quot;: &quot;$QID+$FacilityId&quot;,&#10;            &quot;ARMProcedureStepID&quot;: &quot;&quot;,&#10;            &quot;DeleteStep&quot;: &quot;&quot;,&#10;            &quot;StepCode&quot;: &quot;$StepCode&quot;,&#10;            &quot;StepActualDateTime&quot;: &quot;$StepActualDateTime&quot;,&#10;            &quot;StepCompletionDateTime&quot;: &quot;$StepCompletionDateTime&quot;,&#10;            &quot;StepCompletedByPersonNumber&quot;: $StepCompletedByPersonNumber,&#10;            &quot;StepCompletedByEmail&quot;: &quot;&quot;,&#10;            &quot;StepCompletedByCoEmployeeID&quot;: &quot;&quot;,&#10;            &quot;CrewID&quot;: &quot;$CrewID&quot;,&#10;            &quot;Comment&quot;: &quot;&quot;,&#10;            &quot;Instruction&quot;: &quot;$Instruction&quot;,&#10;            &quot;StepAction&quot;: &quot;&quot;,&#10;            &quot;ReportName&quot;: &quot;Test1&quot;,&#10;            &quot;ProcedureStepGroupUniqueID&quot;: &quot;&quot;,&#10;            &quot;InsertionDate&quot;: &quot;&quot;,&#10;           #set ($fIDAr = [])&#10;            #foreach( $fid in $FacilityId.split(&quot;[~]&quot;) )&#10;              #set($bar = $fIDAr.add($fid))&#10;         #end &#10;          #if ($FacilityId != 'NULL')&#10;                 #if ($IsFacility == 'true')&#10;              &#10;              &quot;FacilityOrigSource&quot;: &quot;$fIDAr.get(0)&quot;,&#10;               &quot;FacilityOrigID&quot;: &quot;$fIDAr.get(1)&quot;,&#10;              #if ($AssetName != 'NULL')&#10;              &quot;ARMFacilityID&quot;: &quot;$AssetName&quot;,&#10;             #end&#10;             #if ($AssetType != 'NULL')&#10;               &quot;ARMFacilityType&quot;: &quot;$AssetType&quot;,&#10;             #end&#10;              &#10;             #elseif ($IsFacility == 'false')&#10;              &quot;ComponentOrigSource&quot;: &quot;$fIDAr.get(0)&quot;,&#10;                &quot;ComponentOrigID&quot;: &quot;$fIDAr.get(1)&quot;,&#10;                 #if ($AssetName != 'NULL')&#10;               &quot;ARMComponentID&quot;: &quot;$AssetName&quot;,&#10;              #end&#10;               #if ($AssetType != 'NULL')&#10;                &quot;ARMComponentType&quot;: &quot;$AssetType&quot;,&#10;               #end&#10;             #end&#10;           #end&#10;           &#10;            &#10;            &quot;AssetSequenceNumber&quot;: 0,&#10;           #set ($rsDesc = [])&#10;            #foreach( $rsd in $ResultDescription.split(&quot;[|]&quot;) )&#10;              #set($bar = $rsDesc.add($rsd))&#10;            #end &#10;            &quot;ProcedureStepResults&quot;: [&#10;              #foreach( $result in $Result.split(&quot;[|]&quot;) )&#10;                #if($velocityCount!=1)&#10;                 ,&#10;                #end&#10;                { &#10;                  #set( $i = $velocityCount - 1)&#10;                  #set( $desc = &quot;&quot;)&#10;                  #if ($rsDesc.size() &gt; $i)&#10;                   #set( $desc = $rsDesc.get($i))&#10;                  #end&#10;                  &quot;Result&quot;: &quot;$result&quot;,&#10;                  &quot;ResultDescription&quot;: &quot;$desc&quot;&#10;                }&#10;              #end &#10;            ]&#10;        }&#10;    ]&#10;}" description="" encode="false" format="" formatvalue="" name="message" order="" paramOrder="0" parentOrder="0" sms-name="" src="" sourcevalue="" srcformatvalue="" target="" targetdatatype="" value="            {&#10;    &quot;ProcedureCode&quot;: &quot;$ProcID&quot;,&#10;    &quot;ProcedureVersion&quot;: $ProcVersion,&#10; &#10;    #set ($rfGID = [])&#10;            #foreach( $rid in $RootFacilityGlobalId.split(&quot;[~]&quot;) )&#10;              #set($bar = $rfGID.add($rid))&#10;         #end &#10;    &quot;FacilityOrigSourceCode&quot;: &quot;$rfGID.get(0)&quot;,&#10;    &quot;FacilityOrigID&quot;: &quot;$rfGID.get(1)&quot;,&#10;    &quot;ARMFacilityID&quot;: &quot;&quot;,&#10;    &quot;ARMFacilityType&quot;: &quot;&quot;,&#10;    &quot;ARMSurveyAreaID&quot;: &quot;&quot;,&#10;    &quot;ARMSurveyAreaType&quot;: &quot;&quot;,&#10;    &quot;ProcedureSteps&quot;: [&#10;        {&#10;          &#10;            &quot;ProcedureStepUniquelD&quot;: &quot;$QID+$FacilityId&quot;,&#10;            &quot;ARMProcedureStepID&quot;: &quot;&quot;,&#10;            &quot;DeleteStep&quot;: &quot;&quot;,&#10;            &quot;StepCode&quot;: &quot;$StepCode&quot;,&#10;            &quot;StepActualDateTime&quot;: &quot;$StepActualDateTime&quot;,&#10;            &quot;StepCompletionDateTime&quot;: &quot;$StepCompletionDateTime&quot;,&#10;            &quot;StepCompletedByPersonNumber&quot;: $StepCompletedByPersonNumber,&#10;            &quot;StepCompletedByEmail&quot;: &quot;&quot;,&#10;            &quot;StepCompletedByCoEmployeeID&quot;: &quot;&quot;,&#10;            &quot;CrewID&quot;: &quot;$CrewID&quot;,&#10;            &quot;Comment&quot;: &quot;&quot;,&#10;            &quot;Instruction&quot;: &quot;$Instruction&quot;,&#10;            &quot;StepAction&quot;: &quot;&quot;,&#10;            &quot;ReportName&quot;: &quot;Test1&quot;,&#10;            &quot;ProcedureStepGroupUniqueID&quot;: &quot;&quot;,&#10;            &quot;InsertionDate&quot;: &quot;&quot;,&#10;           #set ($fIDAr = [])&#10;            #foreach( $fid in $FacilityId.split(&quot;[~]&quot;) )&#10;              #set($bar = $fIDAr.add($fid))&#10;         #end &#10;          #if ($FacilityId != 'NULL')&#10;                 #if ($IsFacility == 'true')&#10;              &#10;              &quot;FacilityOrigSource&quot;: &quot;$fIDAr.get(0)&quot;,&#10;               &quot;FacilityOrigID&quot;: &quot;$fIDAr.get(1)&quot;,&#10;              #if ($AssetName != 'NULL')&#10;              &quot;ARMFacilityID&quot;: &quot;$AssetName&quot;,&#10;             #end&#10;             #if ($AssetType != 'NULL')&#10;               &quot;ARMFacilityType&quot;: &quot;$AssetType&quot;,&#10;             #end&#10;              &#10;             #elseif ($IsFacility == 'false')&#10;              &quot;ComponentOrigSource&quot;: &quot;$fIDAr.get(0)&quot;,&#10;                &quot;ComponentOrigID&quot;: &quot;$fIDAr.get(1)&quot;,&#10;                 #if ($AssetName != 'NULL')&#10;               &quot;ARMComponentID&quot;: &quot;$AssetName&quot;,&#10;              #end&#10;               #if ($AssetType != 'NULL')&#10;                &quot;ARMComponentType&quot;: &quot;$AssetType&quot;,&#10;               #end&#10;             #end&#10;           #end&#10;           &#10;            &#10;            &quot;AssetSequenceNumber&quot;: 0,&#10;           #set ($rsDesc = [])&#10;            #foreach( $rsd in $ResultDescription.split(&quot;[|]&quot;) )&#10;              #set($bar = $rsDesc.add($rsd))&#10;            #end &#10;            &quot;ProcedureStepResults&quot;: [&#10;              #foreach( $result in $Result.split(&quot;[|]&quot;) )&#10;                #if($velocityCount!=1)&#10;                 ,&#10;                #end&#10;                { &#10;                  #set( $i = $velocityCount - 1)&#10;                  #set( $desc = &quot;&quot;)&#10;                  #if ($rsDesc.size() &gt; $i)&#10;                   #set( $desc = $rsDesc.get($i))&#10;                  #end&#10;                  &quot;Result&quot;: &quot;$result&quot;,&#10;                  &quot;ResultDescription&quot;: &quot;$desc&quot;&#10;                }&#10;              #end &#10;            ]&#10;        }&#10;    ]&#10;}" isExtended="false">
+            <accessType></accessType>
+        </template-param>
+        <stub-param value=""/>
+    </service-input>
+    <service-output passthrough="false" isExtended="false">
+        <param datatype="number" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="RequestID" order="" paramOrder="1" parentOrder="0" passnull="false" sms-name="" src="RequestID" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="ResponseMessage" order="" paramOrder="2" parentOrder="0" passnull="false" sms-name="" src="ResponseMessage" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+    </service-output>
+</service>

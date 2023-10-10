@@ -1,0 +1,37 @@
+[ {
+  "sourceObject" : "WorkRequest",
+  "targetObject" : "Asset",
+  "relationshipKeys" : [ {
+    "sourceField" : "FacilityID",
+    "targetField" : "AssetID",
+    "etag" : "ac4c08ba-c8f8-4bbd-98b8-90d62eae72ae"
+  } ],
+  "name" : "WorkRequest_Asset",
+  "type" : "OneToMany",
+  "custom" : false,
+  "cascadeDelete" : true
+}, {
+  "sourceObject" : "WorkRequest",
+  "targetObject" : "WRComment",
+  "relationshipKeys" : [ {
+    "sourceField" : "ARMWorkRequestID",
+    "targetField" : "ARMEntityUniqueID",
+    "etag" : "4861da4c-e4b2-4c61-9dbf-63523452426f"
+  } ],
+  "name" : "WorkRequest_Comment",
+  "type" : "OneToMany",
+  "custom" : false,
+  "cascadeDelete" : true
+}, {
+  "sourceObject" : "WorkRequest",
+  "targetObject" : "WorkRequestTypes",
+  "relationshipKeys" : [ {
+    "sourceField" : "WorkRequestType",
+    "targetField" : "WRTypeCode",
+    "etag" : "ea768edc-53ec-4733-a9c0-1bd9e032770b"
+  } ],
+  "name" : "WorkRequest_WorkRequestTypes",
+  "type" : "OneToMany",
+  "custom" : false,
+  "cascadeDelete" : true
+} ]

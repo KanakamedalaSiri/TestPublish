@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service serviceGroup="" cachable="false" cacheduration="" customOperation="false" description="" endpoint="default" groupType="" id="getWorkComponent" passwordencrypted="false" security="authorized_app_user" type="jsonConnector" smscode="" smsenabled="false">
+    <service-config>
+        <config-param api-version="" appid="" name="preprocessorname" value=""/>
+        <config-param api-version="" appid="" name="postprocessorname" value="com.coned.gasextensions.postprocessor.GetWorkComponent"/>
+        <config-param api-version="" appid="" name="preprocessorJS" value=""/>
+        <config-param api-version="" appid="" name="postprocessorJS" value=""/>
+        <config-param api-version="" appid="" name="preprocessorRules" value=""/>
+        <config-param api-version="" appid="" name="postprocessorRules" value=""/>
+        <config-param api-version="" appid="" name="kony_http_supported_methods" value="POST"/>
+        <config-param api-version="" appid="" name="endpointUrl" value="https://webapi-dev.coned.com/OMPServerGasXdev/OMPServer/arm/v22/workcomponents/id/$WorkComponentGlobalID?WCAttachmentsInPreviousDays=$WCAttachmentsInPreviousDays"/>
+        <config-param api-version="" appid="" name="ignorehttpproxy" value="true"/>
+        <config-param api-version="" appid="" name="http.method" value="GET"/>
+        <config-param api-version="" appid="" name="dataObjectName" value=""/>
+        <config-param api-version="" appid="" name="sockettimeout" value="600000"/>
+        <config-param api-version="" appid="" name="responseEncoding" value="UTF-8"/>
+        <config-param api-version="" appid="" name="isembedxmlpresent" value="false"/>
+        <config-param api-version="" appid="" name="retrycount" value="0"/>
+        <config-param api-version="" appid="" name="identityProvider" value="ConEdOMPAPILogin"/>
+        <config-param api-version="" appid="" name="identityProviderType" value="custom"/>
+    </service-config>
+    <service-input passthrough="false" isExtended="false">
+        <header datatype="" name="" passthrough="false" isExtended="false">
+            <param datatype="string" defaultvalue="" description="" encode="false" format="None" formatvalue="" name="Accept" order="" paramOrder="0" parentOrder="0" sms-name="" src="constant" sourcevalue="application/json" srcformatvalue="" target="" targetdatatype="" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="false" format="None" formatvalue="" name="Ocp-Apim-Subscription-Key" order="" paramOrder="0" parentOrder="0" sms-name="" src="identity" sourcevalue="ConEdOMPAPILogin.security.key" srcformatvalue="" target="" targetdatatype="" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="false" format="None" formatvalue="" name="ARM-OMP-Parameters" order="" paramOrder="0" parentOrder="0" sms-name="" src="identity" sourcevalue="ConEdOMPAPILogin.security.armomp" srcformatvalue="" target="" targetdatatype="" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="false" format="None" formatvalue="" name="Authorization" order="" paramOrder="0" parentOrder="0" sms-name="" src="identity" sourcevalue="ConEdOMPAPILogin.security.auth" srcformatvalue="" target="" targetdatatype="" testvalue="" value="" isExtended="false">
+                <accessType></accessType>
+            </param>
+        </header>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="WorkComponentGlobalID" order="" paramOrder="1" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="ARM~8384" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="999" description="" encode="true" format="None" formatvalue="" name="WCAttachmentsInPreviousDays" order="" paramOrder="2" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="999" value="999" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <stub-param value="[&#10;    {&#10;        &quot;ARMWRSystemCode&quot;: &quot;WM&quot;,&#10;        &quot;ARMWorkComponentID&quot;: 64,&#10;        &quot;WorkComponentDescription&quot;: &quot;PINCT-CO-***-1&quot;,&#10;        &quot;CrewHeadquartersCode&quot;: &quot;M-E110&quot;,&#10;        &quot;SchedulingPolygonCode&quot;: &quot;M-EHN&quot;,&#10;        &quot;Provider&quot;: &quot;CO&quot;,&#10;        &quot;ContractorCode&quot;: null,&#10;        &quot;WorkComponentState&quot;: &quot;DISPATCHED&quot;,&#10;        &quot;WCFieldStatus&quot;: &quot;TR&quot;,&#10;        &quot;WCFieldStatusReasonCode&quot;: null,&#10;        &quot;StartDateTime&quot;: &quot;{{date(&quot;27-12-2018 12:00:00&quot;, &quot;16-01-2019 12:00:00&quot;, &quot;yyyy-MM-dd'T'HH:mm:ss'Z'&quot;)}}&quot;,&#10;         &quot;EndDateTime&quot;:&quot;{{date(&quot;27-12-2018 12:00:00&quot;, &quot;16-01-2019 12:00:00&quot;, &quot;yyyy-MM-dd'T'HH:mm:ss'Z'&quot;)}}&quot;,&#10;        &quot;StandardMinutes&quot;: 1500,&#10;        &quot;Duration&quot;: 12.5,&#10;        &quot;EarliestAppointmentStartDateTime&quot;: null,&#10;        &quot;LatestAppointmentStartDateTime&quot;: null,&#10;        &quot;EarliestStartDateTime&quot;: &quot;2018-10-12T00:00:00Z&quot;,&#10;        &quot;RequestedCompletionDateTime&quot;: &quot;{{date(&quot;27-12-2018 12:00:00&quot;, &quot;16-01-2019 12:00:00&quot;, &quot;yyyy-MM-dd'T'HH:mm:ss'Z'&quot;)}}&quot;,&#10;        &quot;ResourceClass&quot;: &quot;PINCT&quot;,&#10;        &quot;MinContractorPersonQuantity&quot;: 2,&#10;        &quot;MinCompanyPersonQuantity&quot;: 2,&#10;        &quot;MaxContractorPersonQuantity&quot;: 2,&#10;        &quot;MaxCompanyPersonQuantity&quot;: 2,&#10;        &quot;OptimalContractorPersonQuantity&quot;: null,&#10;        &quot;OptimalCompanyPersonQuantity&quot;: 2,&#10;        &quot;CrewID&quot;: &quot;26345&quot;,&#10;        &quot;CrewName&quot;: null,&#10;        &quot;CrewType&quot;: &quot;PC&quot;,&#10;        &quot;CrewProvider&quot;: &quot;INTERNAL&quot;,&#10;        &quot;SuggestedStartDateTime&quot;: null,&#10;        &quot;SpatialD&quot;: null,&#10;        &quot;SpatialX&quot;: 41,&#10;        &quot;SpatialY&quot;: -73,&#10;        &quot;ARMWorkRequestID&quot;: 20,&#10;        &quot;WorkRequestGlobalID&quot;: &quot;ARM~{{timestamp()}}&quot;,&#10;        &quot;WorkRequestName&quot;: &quot;PC REG. STATION I&amp;C INSPECTION&quot;,&#10;        &quot;Address1&quot;: &quot;West 215st&quot;,&#10;        &quot;Address2&quot;: null,&#10;        &quot;Address3&quot;: null,&#10;        &quot;Address4&quot;: null,&#10;        &quot;Address5&quot;: &quot;ST&quot;,&#10;        &quot;Address6&quot;: null,&#10;        &quot;Address7&quot;: null,&#10;        &quot;Address8&quot;: null,&#10;        &quot;Address9&quot;: &quot;MANHATTAN&quot;,&#10;        &quot;Address10&quot;: null,&#10;        &quot;Address11&quot;: null,&#10;        &quot;Address12&quot;: null,&#10;        &quot;Address13&quot;: null,&#10;        &quot;Address14&quot;: null,&#10;        &quot;Address15&quot;: null,&#10;        &quot;ConcatenatedAddress&quot;: &quot;West 215st    ST  MANHATTAN &quot;,&#10;        &quot;WorkRequestType&quot;: &quot;INSPRCT&quot;,&#10;        &quot;Classification&quot;: &quot;INSP&quot;,&#10;        &quot;WorkRequestSubType&quot;: &quot;INSPT-REGSTAT-I&amp;C&quot;,&#10;        &quot;WRStatusCode&quot;: &quot;WIP&quot;,&#10;        &quot;WRPriorityCode&quot;: 30,&#10;        &quot;WROwnerName&quot;: &quot;WROwner Manhattan&quot;,&#10;        &quot;WROwnerPhone&quot;: null,&#10;        &quot;WRCustomerReadyDate&quot;: &quot;2018-10-11&quot;,&#10;        &quot;WRRequestedCompletionDate&quot;: &quot;2018-10-12&quot;,&#10;        &quot;Committed&quot;: &quot;N&quot;,&#10;        &quot;WREarliestAppointmentDateTime&quot;: null,&#10;        &quot;WRLatestAppointmentDateTime&quot;: null,&#10;        &quot;WorkCategory&quot;: &quot;OM&quot;,&#10;        &quot;WorkCode&quot;: &quot;IN_PLANT&quot;,&#10;        &quot;WorkGroup&quot;: &quot;GAS&quot;,&#10;        &quot;WRLocalDistrict&quot;: &quot;M-UT&quot;,&#10;        &quot;WRCompanyCode&quot;: &quot;CONED&quot;,&#10;        &quot;WRCrewHeadquartersCode&quot;: &quot;M-E110&quot;,&#10;        &quot;WRSchedulingPolygonCode&quot;: &quot;M-EHN&quot;,&#10;        &quot;WRTaxDistrict&quot;: &quot;M&quot;,&#10;        &quot;ProcedureCode&quot;: &quot;INSTNLWEEK&quot;,&#10;        &quot;ProcedureVersion&quot;: 1,&#10;        &quot;FacilityGlobalId&quot;: &quot;ARM~50729&quot;,&#10;        &quot;FacilityType&quot;: &quot;PCFACILITY&quot;,&#10;        &quot;FacilityID&quot;: &quot;GR-99&quot;,&#10;        &quot;WorkComponentDependencies&quot;: null,&#10;        &quot;WorkComponentPreRequisites&quot;: [&#10;            {&#10;                &quot;PrerequisiteCode&quot;: &quot;MREQ&quot;,&#10;                &quot;PrerequisiteStatus&quot;: null,&#10;                &quot;StartDateTime&quot;: null,&#10;                &quot;StopDateTime&quot;: null&#10;            },&#10;            {&#10;                &quot;PrerequisiteCode&quot;: &quot;PERMIT&quot;,&#10;                &quot;PrerequisiteStatus&quot;: null,&#10;                &quot;StartDateTime&quot;: null,&#10;                &quot;StopDateTime&quot;: null&#10;            }&#10;        ],&#10;        &quot;WorkComponentResourceConstraints&quot;: null,&#10;        &quot;WorkComponentTimeRestrictions&quot;: null,&#10;        &quot;WorkComponentAttachments&quot;: null,&#10;        &quot;WorkComponentFormDetails&quot;: null,&#10;        &quot;WorkComponentPermitDetails&quot;: null,&#10;        &quot;WorkComponentOneCallDetails&quot;: null&#10;    }&#10;]"/>
+    </service-input>
+    <service-output passthrough="false" isExtended="false">
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="ProcedureCode" order="" paramOrder="1" parentOrder="0" passnull="false" sms-name="" src="//ProcedureCode" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="ProcedureVersion" order="" paramOrder="2" parentOrder="0" passnull="false" sms-name="" src="//ProcedureVersion" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="StartDateTime" order="" paramOrder="3" parentOrder="0" passnull="false" sms-name="" src="//StartDateTime" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="EndDateTime" order="" paramOrder="4" parentOrder="0" passnull="false" sms-name="" src="//RequestedCompletionDateTime" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="WorkRequestName" order="" paramOrder="5" parentOrder="0" passnull="false" sms-name="" src="//WorkRequestName" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="ConcatenatedAddress" order="" paramOrder="6" parentOrder="0" passnull="false" sms-name="" src="//ConcatenatedAddress" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="FacilityGlobalId" order="" paramOrder="7" parentOrder="0" passnull="false" sms-name="" src="//FacilityGlobalId" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="WorkComponentState" order="" paramOrder="8" parentOrder="0" passnull="false" sms-name="" src="//WCFieldStatus" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="WorkRequestGlobalID" order="" paramOrder="9" parentOrder="0" passnull="false" sms-name="" src="//WorkRequestGlobalID" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="FacilityID" order="" paramOrder="10" parentOrder="0" passnull="false" sms-name="" src="//FacilityID" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="CrewID" order="" paramOrder="11" parentOrder="0" passnull="false" sms-name="" src="//CrewID" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="number" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="WRPriorityCode" order="" paramOrder="12" parentOrder="0" passnull="false" sms-name="" src="//WRPriorityCode" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="WorkRequestSubType" order="" paramOrder="13" parentOrder="0" passnull="false" sms-name="" src="//WorkRequestSubType" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="WorkRequestType" order="" paramOrder="14" parentOrder="0" passnull="false" sms-name="" src="//WorkRequestType" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="WorkCode" order="" paramOrder="15" parentOrder="0" passnull="false" sms-name="" src="//WorkCode" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="WorkGroup" order="" paramOrder="16" parentOrder="0" passnull="false" sms-name="" src="//WorkGroup" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="Classification" order="" paramOrder="17" parentOrder="0" passnull="false" sms-name="" src="//Classification" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="ARMFacilityID" order="" paramOrder="18" parentOrder="0" passnull="false" sms-name="" src="//ARMFacilityID" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="ARMWorkRequestID" order="" paramOrder="19" parentOrder="0" passnull="false" sms-name="" src="//ARMWorkRequestID" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="WorkComponentAttachments" order="" paramOrder="20" parentOrder="0" passnull="false" sms-name="" src="//WorkComponentAttachments" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="DispatchedDateTime" order="" paramOrder="21" parentOrder="0" passnull="false" sms-name="" src="//DispatchedDateTime" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="" isExtended="false">
+            <accessType></accessType>
+        </param>
+    </service-output>
+</service>

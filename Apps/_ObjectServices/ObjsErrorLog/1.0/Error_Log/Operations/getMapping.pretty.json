@@ -1,0 +1,90 @@
+{
+    "customVerb": false,
+    "enableFrontendUrl": false,
+    "operationConfig": {
+        "applyCommonMapping": true,
+        "applyRequestCommonMapping": true,
+        "applyResponseCommonMapping": true,
+        "cachable": false,
+        "decodeResponseBody": false,
+        "httpMethod": "GET",
+        "name": "queryErrorLog4620",
+        "odata": [
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$select",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "defaultValue": "(SoftDeleteFlag ne true) or (SoftDeleteFlag eq null)",
+                "encode": true,
+                "id": "$filter",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$orderby",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$top",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$skip",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$expand",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$batchsize",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$batchid",
+                "isExtended": false
+            }
+        ],
+        "opcode": "query",
+        "referencingEndpoint": "default",
+        "relationshipHierarchyMapping": {
+            "actions": {
+                "get": true
+            },
+            "children": [
+                
+            ],
+            "name": "Error_Log",
+            "selected": true
+        },
+        "requestXmlMappingOverride": false,
+        "responseEncoding": "UTF-8",
+        "responseXmlMappingOverride": false,
+        "security": "authorized_app_user",
+        "smsEnabled": false,
+        "type": "MappedToBackend"
+    }
+}

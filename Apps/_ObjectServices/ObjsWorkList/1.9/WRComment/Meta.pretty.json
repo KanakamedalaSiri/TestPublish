@@ -1,0 +1,19 @@
+{
+    "custom": false,
+    "customizable": false,
+    "description": "Work Request Comment object",
+    "entityProperties": {
+        "BatchMode": "buffer",
+        "backendMeta": {
+            
+        },
+        "designTimeBackendMeta": {
+            
+        }
+    },
+    "junction": false,
+    "type": "svcdriven",
+    "verbs": {
+        "get": "getMapping"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "config": {
+        "identityProvider": "ConEdOMPAPILogin",
+        "identityProviderType": "custom"
+    },
+    "encryptSecureInfo": false,
+    "jsonpath": false,
+    "name": "default",
+    "type": "SAAS"
+}

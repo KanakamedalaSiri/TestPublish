@@ -1,0 +1,17 @@
+{
+  "serviceType" : "integration",
+  "jars" : [ {
+    "name" : "GASExtentionVolt.jar",
+    "type" : "servicejar"
+  }, {
+    "name" : "httpmime-4.5.6.jar",
+    "type" : "dependentJar"
+  }, {
+    "name" : "commons-logging-1.2.jar",
+    "type" : "dependentJar"
+  }, {
+    "name" : "SymJavaAPI.jar",
+    "type" : "dependentJar"
+  } ],
+  "empty" : true
+}

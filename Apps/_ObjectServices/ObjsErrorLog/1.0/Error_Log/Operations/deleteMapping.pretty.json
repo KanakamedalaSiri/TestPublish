@@ -1,0 +1,31 @@
+{
+    "customVerb": false,
+    "enableFrontendUrl": false,
+    "operationConfig": {
+        "applyCommonMapping": true,
+        "applyRequestCommonMapping": true,
+        "applyResponseCommonMapping": true,
+        "cachable": false,
+        "decodeResponseBody": false,
+        "httpMethod": "GET",
+        "name": "deleteErrorLog8652",
+        "opcode": "delete",
+        "referencingEndpoint": "default",
+        "relationshipHierarchyMapping": {
+            "actions": {
+                "delete": true
+            },
+            "children": [
+                
+            ],
+            "name": "Error_Log",
+            "selected": true
+        },
+        "requestXmlMappingOverride": false,
+        "responseEncoding": "UTF-8",
+        "responseXmlMappingOverride": false,
+        "security": "authorized_app_user",
+        "smsEnabled": false,
+        "type": "MappedToBackend"
+    }
+}
