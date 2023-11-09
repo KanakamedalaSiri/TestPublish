@@ -1,8 +1,0 @@
-{
-  "serviceType" : "integration",
-  "jars" : [ {
-    "name" : "GASExtentionVolt.jar",
-    "type" : "servicejar"
-  } ],
-  "empty" : true
-}

@@ -1,0 +1,8 @@
+{
+    "channels": "responsive_web",
+    "description": "Binary for KitchenSinkMVC",
+    "displayname": "KitchenSinkMVC",
+    "filename": "KitchenSinkMVC.zip",
+    "upgradable": false,
+    "version": "1.0.1"
+}

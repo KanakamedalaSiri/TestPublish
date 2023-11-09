@@ -1,8 +1,0 @@
-{
-  "filename": "GasExtensionPWA.zip",
-  "channels": "responsive_web",
-  "upgradable": false,
-  "displayname": "Gas Extensions Mobile",
-  "description": "'Binary for GasExtensionPWA'",
-  "version": "4.0.18"
-}
