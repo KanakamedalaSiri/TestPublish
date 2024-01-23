@@ -1,8 +1,0 @@
-{
-  "filename": "storeapi1-release-protected.ipa",
-  "upgradable": false,
-  "displayname": "storeDSLocalAPI",
-  "description": "Application for storeDSLocalAPI",
-  "bundleIdentifier": "com.hcl.appviewerdev",
-  "version": "1.0.0"
-}
