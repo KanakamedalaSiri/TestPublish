@@ -1,0 +1,7 @@
+{
+  "filename": "storeapi1-release-protected.apk",
+  "upgradable": false,
+  "displayname": "storeDSLocalAPI",
+  "description": "Application for storeDSLocalAPI",
+  "version": "1.0.0"
+}
