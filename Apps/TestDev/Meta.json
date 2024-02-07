@@ -1,5 +1,6 @@
 {
   "subType" : "customapp",
+  "description" : "TestDev",
   "version" : "1.0",
   "intSvcs" : [ {
     "name" : "AddTwos",
