@@ -1,0 +1,112 @@
+{
+    "customVerb": false,
+    "enableFrontendUrl": false,
+    "operationConfig": {
+        "applyCommonMapping": false,
+        "applyRequestCommonMapping": true,
+        "applyResponseCommonMapping": false,
+        "backendMeta": {
+            "operationName": "VanityInt",
+            "serviceName": "VanityIntegrationSvc",
+            "serviceVersion": "1.0"
+        },
+        "cachable": false,
+        "decodeResponseBody": false,
+        "httpMethod": "GET",
+        "iMapping": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<mapper xmlns=\"http://www.kony.com/ns/mapper\">\n    <map inputpath=\"request_in\" outputpath=\"request_out\"/>\n</mapper>\n",
+        "iVisualMappingData": "{\"nodeDataArray\":[{\"isGroup\":true,\"key\":\"request_in\",\"text\":\"vanityObject\",\"xy\":\"150 100\"},{\"isGroup\":true,\"key\":\"request_out\",\"text\":\"VanityIntegrationSvc (1.0).MockSvc\",\"xy\":\"770 100\"}],\"linkDataArray\":[]}",
+        "mapperData": [
+            {
+                "applyCommonMapping": false,
+                "applyRequestCommonMapping": true,
+                "applyResponseCommonMapping": false,
+                "disabled": false,
+                "iMapping": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<mapper xmlns=\"http://www.kony.com/ns/mapper\">\n    <map inputpath=\"request_in\" outputpath=\"request_out\"/>\n</mapper>\n",
+                "iVisualMappingData": "{\"nodeDataArray\":[{\"isGroup\":true,\"key\":\"request_in\",\"text\":\"vanityObject\",\"xy\":\"150 100\"},{\"isGroup\":true,\"key\":\"request_out\",\"text\":\"VanityIntegrationSvc (1.0).MockSvc\",\"xy\":\"770 100\"}],\"linkDataArray\":[]}",
+                "name": "base mapper1",
+                "oMapping": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<mapper xmlns=\"http://www.kony.com/ns/mapper\">\n    <map inputpath=\"response_in\" outputpath=\"response_out\">\n        <map inputpath=\"\" outputpath=\"vanityObject\">\n            <set-param inputpath=\"id\" outputpath=\"id\"/>\n            <set-param inputpath=\"name\" outputpath=\"name\"/>\n        </map>\n    </map>\n</mapper>\n",
+                "oVisualMappingData": "{\"nodeDataArray\":[{\"isGroup\":true,\"key\":\"response_out\",\"text\":\"vanityObject\",\"xy\":\"770 100\"},{\"isGroup\":true,\"key\":\"response_in\",\"text\":\"VanityIntegrationSvc (1.0).MockSvc\",\"xy\":\"150 100\"}],\"linkDataArray\":[{\"category\":\"Mapping\",\"from\":\"source:id:\",\"to\":\"target:vanityObject:id:\",\"fromPort\":\"source:id:\",\"toPort\":\"target:vanityObject:id:\",\"visible\":true,\"common\":true},{\"category\":\"Mapping\",\"from\":\"source:name:\",\"to\":\"target:vanityObject:name:\",\"fromPort\":\"source:name:\",\"toPort\":\"target:vanityObject:name:\",\"visible\":true,\"common\":true}]}",
+                "order": 1,
+                "requestXmlMappingOverride": false,
+                "responseXmlMappingOverride": false
+            }
+        ],
+        "name": "MockSvc4394",
+        "oMapping": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<mapper xmlns=\"http://www.kony.com/ns/mapper\">\n    <map inputpath=\"response_in\" outputpath=\"response_out\">\n        <map inputpath=\"\" outputpath=\"vanityObject\">\n            <set-param inputpath=\"id\" outputpath=\"id\"/>\n            <set-param inputpath=\"name\" outputpath=\"name\"/>\n        </map>\n    </map>\n</mapper>\n",
+        "oVisualMappingData": "{\"nodeDataArray\":[{\"isGroup\":true,\"key\":\"response_out\",\"text\":\"vanityObject\",\"xy\":\"770 100\"},{\"isGroup\":true,\"key\":\"response_in\",\"text\":\"VanityIntegrationSvc (1.0).MockSvc\",\"xy\":\"150 100\"}],\"linkDataArray\":[{\"category\":\"Mapping\",\"from\":\"source:id:\",\"to\":\"target:vanityObject:id:\",\"fromPort\":\"source:id:\",\"toPort\":\"target:vanityObject:id:\",\"visible\":true,\"common\":true},{\"category\":\"Mapping\",\"from\":\"source:name:\",\"to\":\"target:vanityObject:name:\",\"fromPort\":\"source:name:\",\"toPort\":\"target:vanityObject:name:\",\"visible\":true,\"common\":true}]}",
+        "odata": [
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$select",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$filter",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$orderby",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$top",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$skip",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$expand",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$batchsize",
+                "isExtended": false
+            },
+            {
+                "accessType": "readonly",
+                "dataType": "string",
+                "encode": true,
+                "id": "$batchid",
+                "isExtended": false
+            }
+        ],
+        "relationshipHierarchyMapping": {
+            "actions": {
+                "get": true
+            },
+            "children": [
+                
+            ],
+            "name": "vanityObject",
+            "selected": true
+        },
+        "requestXmlMappingOverride": false,
+        "responseEncoding": "UTF-8",
+        "responseXmlMappingOverride": false,
+        "security": "public",
+        "smsEnabled": false,
+        "type": "MappedToBackend"
+    }
+}

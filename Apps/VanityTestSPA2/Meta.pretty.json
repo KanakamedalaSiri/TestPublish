@@ -1,0 +1,52 @@
+{
+    "description": "VanityTestSPA2",
+    "identity": [
+        "testIdentity2"
+    ],
+    "identitySvcConf": "{\"session_idle_timeout_mins\":20,\"session_max_duration_mins\":360,\"show_security_attributes\":false,\"is_integrity_enabled\":false,\"auto_extend\":true}",
+    "intSvcs": [
+        {
+            "etag": "835b25ac-63b2-431d-bba6-bc872da0259a",
+            "name": "Copy2VanityIntegrationSvc",
+            "version": "1.0"
+        },
+        {
+            "etag": "fb4bddbb-16db-48d4-87b2-30734e70693a",
+            "name": "Test",
+            "version": "1.0"
+        },
+        {
+            "etag": "0f379f8b-72bb-4435-88bc-7fd41aaa5a96",
+            "name": "Test2",
+            "version": "1.0"
+        },
+        {
+            "etag": "830a2d1f-d674-4be2-8423-c35b4ce2c2ad",
+            "name": "VanityIntegrationSvc",
+            "version": "1.0"
+        }
+    ],
+    "objectSvcs": [
+        {
+            "etag": "6f156084-dd61-42b1-9bb3-92f45c4f4674",
+            "name": "Copy2VanityObjectSvc",
+            "version": "1.0"
+        }
+    ],
+    "orchSvcs": [
+        {
+            "etag": "48be074b-dc1d-4eab-b450-935f5ed185bc",
+            "name": "Copy2VanityOrchestractionSvc",
+            "version": "1.0"
+        }
+    ],
+    "rulesSvcs": [
+        {
+            "etag": "bbf83930-db55-4371-aee7-b911f1d189bc",
+            "name": "Copy2VanityRulesSvc",
+            "version": "1.0"
+        }
+    ],
+    "subType": "customapp",
+    "version": "1.0"
+}

@@ -1,0 +1,10 @@
+{
+    "config": {
+        "conflict_policy": "none",
+        "delete_strategy": "soft-delete",
+        "metadataSecurity": "public",
+        "offline": false,
+        "uploadCache": false
+    },
+    "empty": true
+}

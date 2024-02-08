@@ -1,0 +1,22 @@
+{
+    "admissionPolicy": "no_approval_needed",
+    "config": {
+        "session_restrictions": {
+            "session_restriction_type": "allow_any_number_of_sessions"
+        }
+    },
+    "empty": true,
+    "identityMeta": {
+        "allow_sso": false
+    },
+    "isIntegrityEnabled": true,
+    "metaPreference": -1,
+    "name": "testIdentity2",
+    "policyConfig": {
+        "def_user_status": "pending",
+        "max_login_fail": 5
+    },
+    "ssoenabled": false,
+    "type": "userstore",
+    "version": "1.0"
+}
