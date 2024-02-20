@@ -1,12 +1,11 @@
 {
   "subType" : "customapp",
-  "description" : "TestDev",
-  "version" : "1.0",
+  "version" : "99.0",
   "intSvcs" : [ {
     "name" : "AddTwos",
     "version" : "1.0",
     "etag" : "ceffe3f0-9294-4683-9978-85102764c78f"
   } ],
-  "identity" : [ "ASDA", "Insaaaaaa", "Instas", "oauth2" ],
+  "identity" : [ "ASDA", "fbook", "hellogoo", "InstantInsta", "oauth2", "onJune30Insta" ],
   "identitySvcConf" : "{\"session_idle_timeout_mins\":20,\"session_max_duration_mins\":360,\"show_security_attributes\":false,\"is_integrity_enabled\":false,\"auto_extend\":true}"
 }
