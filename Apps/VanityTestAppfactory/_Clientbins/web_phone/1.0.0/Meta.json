@@ -1,8 +1,8 @@
 {
-  "filename": "KSApp1.zip",
+  "filename": "VanityIrisPS.zip",
   "channels": "responsive_web",
   "upgradable": false,
-  "displayname": "Sample",
-  "description": "'Binary for KSApp1'",
+  "displayname": "VanityIrisPS",
+  "description": "'Binary for VanityIrisPS'",
   "version": "1.0.0"
 }
