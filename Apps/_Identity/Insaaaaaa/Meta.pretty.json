@@ -70,6 +70,7 @@
         "allow_sso": false
     },
     "isIntegrityEnabled": true,
+    "mapType": "java.util.HashMap",
     "metaPreference": -1,
     "name": "Insaaaaaa",
     "policyConfig": {
