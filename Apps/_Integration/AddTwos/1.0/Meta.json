@@ -5,6 +5,5 @@
     "type" : "jsfile"
   } ],
   "description" : "Addition of numbers",
-  "mapType" : "java.util.HashMap",
   "empty" : true
 }
