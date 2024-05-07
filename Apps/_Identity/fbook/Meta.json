@@ -11,5 +11,6 @@
   },
   "isIntegrityEnabled" : true,
   "ssoenabled" : false,
+  "mapType" : "java.util.HashMap",
   "empty" : true
 }
