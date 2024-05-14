@@ -1,0 +1,8 @@
+{
+  "filename": "SHARE.zip",
+  "channels": "responsive_web",
+  "upgradable": false,
+  "displayname": "SHARE",
+  "description": "'Binary for SHARE'",
+  "version": "1.0.1"
+}
