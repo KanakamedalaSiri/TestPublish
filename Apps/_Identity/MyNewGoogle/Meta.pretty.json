@@ -68,14 +68,7 @@
     },
     "empty": true,
     "identityMeta": {
-        "allow_sso": false,
-        "oauth2_success_url_config": {
-            "allow_any": true,
-            "allowed_urls": [
-                
-            ],
-            "default": -1
-        }
+        "allow_sso": false
     },
     "isIntegrityEnabled": true,
     "mapType": "java.util.HashMap",
