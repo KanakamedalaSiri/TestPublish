@@ -1,7 +1,6 @@
 {
     "description": "TestDev",
     "identity": [
-        "ASDA",
         "fbook",
         "oauth2"
     ],
